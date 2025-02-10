@@ -14,6 +14,7 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/hyperfy-xyz',
 				discord: 'https://discord.gg/SzPjsvk5',
+				'x.com': 'https://x.com/hyperfy_io',
 			},
 			sidebar: [
 				{
