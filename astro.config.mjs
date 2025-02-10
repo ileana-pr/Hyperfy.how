@@ -20,6 +20,7 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
+						{ label: 'Contribute Here', slug: 'guides/contribute' },
 						{ label: 'Docs', slug: 'guides/docs' },
 						{ label: 'Videos', slug: 'guides/videos' },
 					],
