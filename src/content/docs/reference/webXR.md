@@ -10,3 +10,5 @@ This adds initial support for WebXR by adding a new button on the GUI to begin a
 
 
 * [View Pull Request](https://github.com/hyperfy-xyz/hyperfy/pull/29)
+
+* [WebXR fork](https://github.com/msub2/hyperfy)
