@@ -24,6 +24,7 @@ export default defineConfig({
 						{ label: 'Contribute Here', slug: 'guides/contribute' },
 						{ label: 'Hyperfy Branding', slug: 'guides/branding' },
 						{ label: 'Docs', slug: 'guides/docs' },
+						{ label: '$Hyper Token', slug: 'guides/token' },
 						{ label: 'Videos', slug: 'guides/videos' },
 					],
 				},
