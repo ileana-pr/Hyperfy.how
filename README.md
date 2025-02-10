@@ -63,3 +63,5 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+
+[Expressive Code is installed in Starlight already](https://expressive-code.com/installation/#starlight)
