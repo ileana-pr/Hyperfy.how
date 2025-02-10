@@ -1,4 +1,15 @@
-# Starlight Starter Kit: Basics
+The Hype is a 'Awesome Hyperfy' community resource for [Hyperfy v2.](https://github.com/hyperfy-xyz/hyperfy)
+
+Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  (be sure to start with frontmatter format of all others)
+
+Sidebar and page link will autogenerate on 'reference' section.
+
+On 'guides' section, need to add to astro.config.mjs.
+
+
+
+---
+
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 

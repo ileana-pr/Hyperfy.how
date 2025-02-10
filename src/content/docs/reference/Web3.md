@@ -1,0 +1,24 @@
+---
+title: Web3
+description: Resources to integrate Web3 into Hyperfy v2.
+---
+
+The following resources are available to integrate Web3 into Hyperfy v2:
+
+
+### Solana
+
+* **[Solana Integration](https://github.com/hyperfy-xyz/hyperfy/tree/solana)**: Github branch to start Solana integration in Hyperfy v2
+
+### EVM (Base, Optimism...)
+
+* **[EVM Integration with Wagmi](https://github.com/peezy/hyperfy/tree/evm_dev)**: Github branch for EVM integration using Wagmi in Hyperfy v2
+
+### **Autonomous World Engines**
+
+* **[MUD](https://mud.dev/)**: Open-source engine for autonomous worlds, simplifying the process of building Ethereum apps with a tightly integrated software stack.
+
+### **Decentralized Computing**
+
+* **[Arweave's AO](https://ao.arweave.dev/)**: A decentralized supercomputer built on top of Arweave's permanent data storage, enabling parallel computing and innovative applications.
+
