@@ -23,7 +23,6 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Contribute Here', slug: 'guides/contribute' },
-						{ label: 'Hyperfy Branding', slug: 'guides/branding' },
 						{ label: 'FAQs', slug: 'guides/faq' },
 						{ label: 'Quick Start', slug: 'guides/quickstart' },
 						{ label: 'Getting Started', slug: 'guides/getting-started' },
@@ -35,8 +34,14 @@ export default defineConfig({
 						{ label: 'Models', slug: 'guides/models' },
 						{ label: 'Commands', slug: 'guides/commands' },
 						{ label: 'Scripts', slug: 'guides/scripts' },
-						{ label: '$Hyper Token', slug: 'guides/token' },
 						{ label: 'Videos', slug: 'guides/videos' },
+					],
+				},
+				{
+					label: 'Brand & Token',
+					items: [
+						{ label: 'Hyperfy Branding', slug: 'guides/branding' },
+						{ label: '$Hyper Token', slug: 'guides/token' },
 					],
 				},
 				{
