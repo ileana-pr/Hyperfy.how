@@ -21,6 +21,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Contribute Here', slug: 'guides/contribute' },
+						{ label: 'Hyperfy Branding', slug: 'guides/branding' },
 						{ label: 'Docs', slug: 'guides/docs' },
 						{ label: 'Videos', slug: 'guides/videos' },
 					],
