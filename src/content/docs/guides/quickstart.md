@@ -3,9 +3,20 @@ title: Quick Start
 description: Quick start to get building in Hyperfy v2.
 ---
 
-### Prerequisites
+## Prerequisites
+
+
+
+### WSL2 Recommended
+
+[On Windows?  Install WSL2](/reference/coding/#wsl2)
+
+
+### Node
 
 **Node 22.11.0+ (eg via [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md))**
+
+
 
 ### Install
 
@@ -22,4 +33,5 @@ npm run dev
 ### Github Repo
 
 [Hyperfy Repo](https://github.com/hyperfy-xyz/hyperfy)
+
 

@@ -15,6 +15,7 @@ export default defineConfig({
 				github: 'https://github.com/hyperfy-xyz',
 				discord: 'https://discord.gg/SzPjsvk5',
 				'x.com': 'https://x.com/hyperfy_io',
+				farcaster: 'https://warpcast.com/~/channel/hyperfy',
 			},
 			sidebar: [
 				{
@@ -26,6 +27,9 @@ export default defineConfig({
 						{ label: 'FAQs', slug: 'guides/faq' },
 						{ label: 'Quick Start', slug: 'guides/quickstart' },
 						{ label: 'Docs', slug: 'guides/docs' },
+						{ label: 'ref/World', slug: 'guides/world' },
+						{ label: 'Entity/App', slug: 'guides/entity' },
+						{ label: 'Nodes', slug: 'guides/nodes' },
 						{ label: 'Models', slug: 'guides/models' },
 						{ label: 'Commands', slug: 'guides/commands' },
 						{ label: 'Scripts', slug: 'guides/scripts' },
