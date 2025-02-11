@@ -16,12 +16,14 @@ export default defineConfig({
 				discord: 'https://discord.gg/SzPjsvk5',
 				'x.com': 'https://x.com/hyperfy_io',
 				farcaster: 'https://warpcast.com/~/channel/hyperfy',
+				youtube: 'https://www.youtube.com/@hyperfy_xyz',
 			},
 			sidebar: [
 				{
 					label: 'Welcome',
 					items: [
-						{ label: 'Contribute Here', slug: 'welcome/contribute' },
+						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
+						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
 					],
 				},
 				{
