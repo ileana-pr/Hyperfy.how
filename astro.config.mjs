@@ -19,6 +19,13 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Brand & Token',
+					items: [
+						{ label: 'Hyperfy Colors', slug: 'brand/colors' },
+						{ label: '$Hyper Token', slug: 'brand/token' },
+					],
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
@@ -35,13 +42,6 @@ export default defineConfig({
 						{ label: 'Commands', slug: 'guides/commands' },
 						{ label: 'Scripts', slug: 'guides/scripts' },
 						{ label: 'Videos', slug: 'guides/videos' },
-					],
-				},
-				{
-					label: 'Brand & Token',
-					items: [
-						{ label: 'Hyperfy Branding', slug: 'guides/branding' },
-						{ label: '$Hyper Token', slug: 'guides/token' },
 					],
 				},
 				{
