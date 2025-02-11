@@ -3,6 +3,8 @@ title: Contribute Here
 description: Contribute to community resource.
 ---
 
+### Site Repo
+
 [Repo is Here](https://github.com/Innkeeping/theHype)
 
 The Hype is a 'Awesome Hyperfy' community resource for [Hyperfy v2.](https://github.com/hyperfy-xyz/hyperfy)
@@ -13,12 +15,16 @@ Sidebar and page link will autogenerate on 'resources' section.
 
 'resources' sidebar will be in order based on the .md/.mdx file name.
 
-On 'guides' and 'brand' sections, need to add to astro.config.mjs.
+On 'guides' and 'brand' sections, need to add to astro.config.mjs. Order is based on astro.config.mjs.
 
 ---
+
+### Starlight on Astro
 
 Site is built using [Starlight on Astro](https://starlight.astro.build/)
 
 For tips on using asides, badges, embeds, etc -- check the docs or find in this repo and copy.
 
 When using any import/components, file must be .mdx
+
+[Expressive code](https://expressive-code.com/) is built into Starlight for code blocks/steps.

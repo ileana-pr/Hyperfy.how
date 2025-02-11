@@ -35,3 +35,4 @@ npm run dev
 [Hyperfy Repo](https://github.com/hyperfy-xyz/hyperfy)
 
 
+[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)

@@ -43,6 +43,7 @@ export default defineConfig({
 						{ label: 'Community Assets', slug: 'guides/assets' },
 						{ label: 'ref/World', slug: 'guides/world' },
 						{ label: 'Entity/App', slug: 'guides/entity' },
+						{ label: '.hyp App Format', slug: 'guides/hyp-app-format' },
 						{ label: 'Nodes', slug: 'guides/nodes' },
 						{ label: 'Models', slug: 'guides/models' },
 						{ label: 'Commands', slug: 'guides/commands' },
