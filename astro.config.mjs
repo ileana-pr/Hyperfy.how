@@ -23,6 +23,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Hyperfy Colors', slug: 'brand/colors' },
 						{ label: '$Hyper Token', slug: 'brand/token' },
+						{ label: 'Tweets', slug: 'brand/x' },
 					],
 				},
 				{

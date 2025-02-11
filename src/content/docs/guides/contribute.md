@@ -13,7 +13,7 @@ Sidebar and page link will autogenerate on 'resources' section.
 
 'resources' sidebar will be in order based on the .md/.mdx file name.
 
-On 'guides' section, need to add to astro.config.mjs.
+On 'guides' and 'brand' sections, need to add to astro.config.mjs.
 
 ---
 
