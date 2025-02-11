@@ -19,6 +19,12 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Welcome',
+					items: [
+						{ label: 'Contribute Here', slug: 'welcome/contribute' },
+					],
+				},
+				{
 					label: 'Brand & Token',
 					items: [
 						{ label: 'Hyperfy Colors', slug: 'brand/colors' },
@@ -30,7 +36,6 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Contribute Here', slug: 'guides/contribute' },
 						{ label: 'FAQs', slug: 'guides/faq' },
 						{ label: 'Quick Start', slug: 'guides/quickstart' },
 						{ label: 'Getting Started', slug: 'guides/getting-started' },
