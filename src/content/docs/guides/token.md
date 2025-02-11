@@ -13,8 +13,8 @@ CA: 8vBMibwpn8wpfYKbQ9xqzodymg3LjmYec2tSNGRy23K8
 ---
 
 ### Create in-world use cases
-Want to [add use case in world](/reference/web3/#solana) on Solana?
+Want to [add use case in world](/resources/web3/#solana) on Solana?
 
 
 ### Marketplaces coming soon!
-Stay tuned for [marketplaces to use Hyper](/reference/hosting/#hyperworldshost)...
+Stay tuned for [marketplaces to use Hyper](/resources/hosting/#hyperworldshost)...

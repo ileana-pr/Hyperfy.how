@@ -9,9 +9,9 @@ The Hype is a 'Awesome Hyperfy' community resource for [Hyperfy v2.](https://git
 
 Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  (be sure to start with frontmatter format of all others)
 
-Sidebar and page link will autogenerate on 'reference' section.
+Sidebar and page link will autogenerate on 'resources' section.
 
-'reference' sidebar will be in order based on the .md/.mdx file name.
+'resources' sidebar will be in order based on the .md/.mdx file name.
 
 On 'guides' section, need to add to astro.config.mjs.
 

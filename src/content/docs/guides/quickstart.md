@@ -9,7 +9,7 @@ description: Quick start to get building in Hyperfy v2.
 
 ### WSL2 Recommended
 
-[On Windows?  Install WSL2](/reference/coding/#wsl2)
+[On Windows?  Install WSL2](/resources/coding/#wsl2)
 
 
 ### Node
