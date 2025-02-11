@@ -41,6 +41,7 @@ export default defineConfig({
 						{ label: 'Getting Started', slug: 'guides/getting-started' },
 						{ label: 'Docs', slug: 'guides/docs' },
 						{ label: 'Community Assets', slug: 'guides/assets' },
+						{ label: 'Blender Exporter', slug: 'guides/blender-exporter' },
 						{ label: 'ref/World', slug: 'guides/world' },
 						{ label: 'Entity/App', slug: 'guides/entity' },
 						{ label: '.hyp App Format', slug: 'guides/hyp-app-format' },

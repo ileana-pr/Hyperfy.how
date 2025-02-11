@@ -30,9 +30,9 @@ npm run dev
 
 ```
 
-### Github Repo
+### Hyperfy v2 Github Repo
 
-[Hyperfy Repo](https://github.com/hyperfy-xyz/hyperfy)
+[Hyperfy v2 Repo](https://github.com/hyperfy-xyz/hyperfy)
 
 
 [Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
