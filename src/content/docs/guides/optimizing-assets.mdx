@@ -1,0 +1,192 @@
+---
+title: Optimizing Assets
+description: Creating Optimized Models and Worlds for Hyperfy v2.
+---
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+This page is WIP, if you have suggestions please make a [PR](/welcome/contribute)
+</Aside>
+
+The Hyperfy engine heavily relies on client-side processing to deliver an immersive experience.
+
+The user experience in world can be significantly impacted by the optimizations of the models and other components set up in the world.
+
+To provide the most users with the best experiences, we recommend the following focus areas for optimization:
+
+- Reducing the size of texture
+- Reducing the number of draw calls
+- Reducing the number of triangles
+- Reducing collider complexity
+
+[![Optimize for the Web](/optimize.webp)](/optimize.webp)
+
+[![Optimization Chart](/optimizationChart.webp)](/optimizationChart.webp)
+
+---
+
+## Measuring Performance
+
+Press the ~ button in world to pull up live world performance statistics:
+
+- Frames per Second
+- Draw Calls
+- Triangles
+- Geometris
+- Textures
+
+---
+
+## Improving Performance
+
+The following are focus areas to improve performance of models rendered in world.
+
+### Draw Calls
+| Draw calls are necessary, reduce them.
+
+Draw calls are requests made to the graphics API to render objects on the screen. Inefficient configuration of a model will lead to excessive draw calls when a single consoldiated call could be used.
+
+| Performance | Latency Range |
+| --- | --- |
+| Perfect | < 100 |
+| Great | 101-300 |
+| Good | 301-600 |
+| Uhh | 601-900 |
+| Unoptimized | 901+ |
+
+
+---
+
+### Textures and Meshes
+| Textures are great, jpeg them.
+
+
+| Performance | Latency Range |
+| --- | --- |
+| Perfect | < 100 |
+| Great | 101-300 |
+| Good | 301-600 |
+| Uhh | 601-900 |
+| Unoptimized | 901+ |
+
+---
+
+### Triangles and Polygons
+| Triangles are great; decimate, retopo, or bake them.
+
+| Performance | Latency Range |
+| --- | --- |
+| Perfect | < 100k |
+| Great | 101-200 |
+| Good | 201-300 |
+| Uhh | 301-500k |
+| Unoptimized | 501k+ |
+
+---
+
+### Collision
+| Physics are great; select colisions appropriately.
+
+#### Collision Setting Optimization
+
+Ask yourself "Do I really need a collision on this object?" if you can get away without one, do so by setting collision to Nothing. If you do require collision, consider the appropriate level of collision required to be calculated by the engine:
+
+---
+
+<Aside type="note">
+[need to insert diagram from hackmd here](https://hackmd.io/YtEOOp2FQhWq3qfHOrLiiw#Collision-Setting-Optimization)
+</Aside>
+
+
+- Static - For basic objects that will not move such as buildings, walls, or trees use static collision. This is the most common type and requires the least computation for object collision.
+
+- Kinematic - For objects that you want to control through code (e.g. a moving platform), use kinematic. This will allow the collider to move (i.e. the collider's position is updated as it moves) but is computationally cheaper than dynamic.
+
+- Dynamic - Use this when you want to create objects that react in a physically accurate way. Think: balls that get kicked/moved by players, cars that crash into stuff etc. It's very computationally expensive so use this option sparingly.
+
+---
+
+### Collision Mesh Optimization
+Regardless of which collider setting is used, make sure you create simple collision meshes rather than the original model. Fewer vertices is definitely better here! Make really simple collision shapes if you can.
+
+Don't model every detail, it's rare that you'll need a super-detailed collision mesh. Less is more! For example, if you don't allow players to fly you don't need collisions above where they can walk/run/jump. It's just a waste of compute. So for a big tree just add a 3m tall cylinder/box (no endcaps!) to where the trunk is. This will stop people running through it but will be cheap.
+
+---
+
+## Other Factors
+Other factors that impact performance include:
+
+- Lighting and shading - bake where possible
+
+- Skybox HDR - similar technique to texture optimization; ideally fit into 128x128 or up to 2k for best overall performance
+
+- Animation and rigging
+
+- Number of users and their avatars - plan the experience and anticipate the number of users intended; provide optimized avatars for higher volume of users
+
+---
+
+## Hyperfy Engine Optimizations
+
+The Hyperfy engine provides the following further optimizations:
+
+- Automatic GPU instancing where thousands of duplicates of the same object only result in 1 draw call.
+- Linked duplicates (cmd+D in Blender) are also optimized down to a single shared draw call.
+- Frustum culling is applied with a few exceptions so meshes that are outside of the camera frustum do not get drawn. Occlusion culling is not currently supported.
+- Level-of-Details (LOD's) are respected and can be configured from 3d tools such as Blender.
+
+---
+
+## Optimizing Avatars
+VRM's should be less than 4mb and less than 20k tris
+
+---
+
+### Additional resources to build VRM avatars:
+
+- [Simple VRM](https://vrm-addon-for-blender.info/en/create-simple-vrm-from-scratch/)
+- [Humanoid VRM](https://vrm-addon-for-blender.info/en/create-humanoid-vrm-from-scratch/)
+
+---
+
+## Links to Optimization Tools
+
+- [Collider Optimization for Blender by hiro](https://github.com/docherty/hiros-tools)
+
+- [gltf-optimizer](https://github.com/M3-org/gltf-optimizer/issues)
+
+- [Mesh Optimizer](https://github.com/zeux/meshoptimizer/releases)
+
+- [VRM-Addon-for-Blender](https://github.com/saturday06/VRM-Addon-for-Blender)
+
+- [UniVRM](https://vrm.dev/en/univrm/)
+
+- [Cats Blender Plugin](https://github.com/absolute-quantum/cats-blender-plugin)
+
+- [Mals-Blender-VRM0-Utility](https://github.com/Menithal/Mals-Blender-VRM0-Utility)
+
+---
+
+### Links to Other Resources
+- [Optimizing your Mesh by MONAVERSE](https://docs.monaverse.com/create/creating-assets/optimizing-your-mesh)
+- [Super optimizing GLB files using Texture Compression with ZenCompress](https://www.youtube.com/watch?v=gsqrHDmgTfA&ab_channel=ConorWoodard)
+- Demo: https://www.khronos.org/gltf/gltf-asset-auditor/
+- [Recommended Schema](https://github.com/KhronosGroup/gltf-asset-auditor/blob/main/tests/schemas/khronos-recommended.json)
+- [Publishing guideline summary:](https://github.com/KhronosGroup/3DC-Asset-Creation/blob/main/asset-creation-guidelines/RealtimeAssetCreationGuidelines.md#publishing-targets-summary)
+- [3DC Asset Creation More details](https://github.com/KhronosGroup/3DC-Asset-Creation/blob/main/asset-creation-guidelines/full-version/sec99_PublishingTargets/PublishingTargets.md)
+- [Optimizing Webaverse Island in Blender](https://youtu.be/R-fdhUzjeIs)
+- [SugarClub.eth Optimizing base mesh avatar](https://twitter.com/sugarclub_/status/1664001303230423041?s=46)
+
+
+---
+
+## Technical Considerations for worlds
+
+- File size
+- Number of triangles
+- Draw calls
+- Minimum system requirements
+- Optimal browser configurations
+- Limiting world file sizes
+
+---

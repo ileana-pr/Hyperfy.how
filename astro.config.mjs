@@ -42,6 +42,7 @@ export default defineConfig({
 						{ label: 'Docs', slug: 'guides/docs' },
 						{ label: 'Community Assets', slug: 'guides/assets' },
 						{ label: 'Blender Exporter', slug: 'guides/blender-exporter' },
+						{ label: 'Optimizing Assets', slug: 'guides/optimizing-assets' },
 						{ label: 'ref/World', slug: 'guides/world' },
 						{ label: 'Entity/App', slug: 'guides/entity' },
 						{ label: '.hyp App Format', slug: 'guides/hyp-app-format' },
