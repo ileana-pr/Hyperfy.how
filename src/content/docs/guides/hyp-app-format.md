@@ -3,7 +3,7 @@ title: .hyp Apps
 description: .hyp App format in Hyperfy v2.
 ---
 
-The `.hyp` file format is a custom binary format used for Hyperfy Apps that bundles a blueprint configuration with its associated assets.
+The `.hyp` file format is a custom binary format used for Hyperfy v2 Apps that bundles a blueprint configuration with its associated assets.
 
 ## File Structure
 
