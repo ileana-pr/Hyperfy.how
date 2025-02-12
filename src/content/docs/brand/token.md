@@ -16,7 +16,7 @@ description: $Hyper Token on Solana
 
 
 
-[![Hyper](/assets/logoCircle.webp)](/assets/logoCircle.webp)
+[![Hyper](/assets/circle.webp)](/assets/circle.webp)
 
 
 ---
