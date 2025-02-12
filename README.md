@@ -1,11 +1,32 @@
-The Hype is a 'Awesome Hyperfy' community resource for [Hyperfy v2.](https://github.com/hyperfy-xyz/hyperfy)
+*You can click 'Edit Page' on the bottom of any page to go directly to it in repo*
+
+Hyperfy.how is a living community resource for [Hyperfy v2.](https://github.com/hyperfy-xyz/hyperfy)
+
+It will continue to evolve as Hyperfy v2 progresses. (with your help! 🚀)
 
 Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  (be sure to start with frontmatter format of all others)
 
-Sidebar and page link will autogenerate on 'reference' section.
+Sidebar and page link will autogenerate on 'resources' section based on the frontmatter title of the file in the 'resources' folder.
 
-On 'guides' section, need to add to astro.config.mjs.
+'resources' sidebar will be in order based on the .md/.mdx file name.
 
+On 'guides' and up to 'welcome' section, you will need to add to astro.config.mjs. Order is based on astro.config.mjs.  Easiest is to copy from above and edit.  You can have nested sidebars.
+
+---
+
+### Starlight on Astro
+
+Site is built using [Starlight on Astro](https://starlight.astro.build/)
+
+For tips on using asides, badges, embeds, etc -- check the docs or find in this repo and copy.
+
+When using any import/components, file must be .mdx
+
+---
+
+### Expressive Code
+
+[Expressive code](https://expressive-code.com/key-features/syntax-highlighting/) is built into Starlight for code blocks/steps.
 
 
 ---
