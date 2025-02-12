@@ -41,6 +41,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Tweets', slug: 'socials/x' },
 						{ label: 'Youtube', slug: 'socials/youtube' },
+						{ label: 'Bluesky', slug: 'socials/bluesky' },
 					],
 				},
 				{
@@ -57,12 +58,17 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Community Assets',
+					items: [
+						{ label: 'Hyperduck', slug: 'community/assets' },
+					],
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting Started', slug: 'guides/getting-started' },
 						{ label: 'Docs', slug: 'guides/docs' },
-						{ label: 'Community Assets', slug: 'guides/assets' },
 						{ label: 'Blender Exporter', slug: 'guides/blender-exporter' },
 						{ label: 'Optimizing Assets', slug: 'guides/optimizing-assets' },
 						{ label: 'ref/World', slug: 'guides/world' },

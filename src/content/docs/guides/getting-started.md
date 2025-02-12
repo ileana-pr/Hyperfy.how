@@ -22,7 +22,7 @@ Information about Hyperfy's global API's can be found in the [reference director
 
 Script examples to help you get started can be found in the [example directory](https://github.com/wyattlovesgrapes/hyperfy/tree/docs-feb-2-25/docs/examples).
 
-### [Community Assets](/guides/assets)
+### [Community Assets](/community/assets)
 
 Some GLTF models that are ready to drag and drop into your hyperfy world like the [hyperDuck.glb](/guides/assets/) can be found in the [assets directory](/guides/assets/).
 
