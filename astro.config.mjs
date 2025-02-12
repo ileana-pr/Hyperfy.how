@@ -24,6 +24,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
 						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
+						{ label: 'FAQs', slug: 'welcome/faq' },
 					],
 				},
 				{
@@ -42,6 +43,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Quick Start',
+					items: [
+						{ label: 'Installation', slug: 'quickstart/installation' },
+					],
+				},
+				{
 					label: 'v2 Hosting',
 					items: [
 						{ label: 'Self Hosting', slug: 'hosting/self' },
@@ -52,8 +59,6 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'FAQs', slug: 'guides/faq' },
-						{ label: 'Quick Start', slug: 'guides/quickstart' },
 						{ label: 'Getting Started', slug: 'guides/getting-started' },
 						{ label: 'Docs', slug: 'guides/docs' },
 						{ label: 'Community Assets', slug: 'guides/assets' },

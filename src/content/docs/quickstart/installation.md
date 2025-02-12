@@ -1,6 +1,6 @@
 ---
-title: Quick Start
-description: Quick start to get building in Hyperfy v2.
+title: Quick Start Installation
+description: Quick start installation to get building in Hyperfy v2.
 ---
 
 ## Prerequisites

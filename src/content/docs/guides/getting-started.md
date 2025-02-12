@@ -26,6 +26,6 @@ Script examples to help you get started can be found in the [example directory](
 
 Some GLTF models that are ready to drag and drop into your hyperfy world like the [hyperDuck.glb](/guides/assets/) can be found in the [assets directory](/guides/assets/).
 
-### [FAQ](/guides/faq)
+### [FAQ](/welcome/faq)
 
-If you run into problems please feel free to join our [Discord](https://discord.gg/KbgAua7XXS) to ask for help, but some issues others have run into are documented in the [FAQ](/guides/faq).
+If you run into problems please feel free to join our [Discord](https://discord.gg/KbgAua7XXS) to ask for help, but some issues others have run into are documented in the [FAQ](/welcome/faq).
