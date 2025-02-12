@@ -7,7 +7,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'The Hype',
+			title: 'Hyperfy.how',
 			customCss: [
         './src/styles/custom.css',
 			],
