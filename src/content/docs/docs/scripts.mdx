@@ -43,8 +43,8 @@ Apps run inside their own secure environment, which allow apps built by many dif
 
 Just as websites run inside a DOM-based environment that provides browser APIs via globals, apps are provided with specific APIs for the global app and player entities:
 
-- [app](/docs/ref/App.md)
-- [props](/docs/ref/Props.md)
+- [app](/ref/app)
+- [props](/ref/props)
 - [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - [Vector3](https://threejs.org/docs/#api/en/math/Vector3)
 - [Quaternion](https://threejs.org/docs/#api/en/math/Quaternion)
@@ -55,14 +55,14 @@ Just as websites run inside a DOM-based environment that provides browser APIs v
 ## Nodes
 
 Apps are made up of a hierarchy of nodes that you can view and modify within the app runtime using scripts.
-Nodes contain certain default attributes that are inherited by all other nodes such as `node.position` or `node.scale`. Information on the standard node attributes can be found in [Node.md](/docs/ref/world/nodes/Node.md)
+Nodes contain certain default attributes that are inherited by all other nodes such as `node.position` or `node.scale`. Information on the standard node attributes can be found in [Node](/ref/node)
 
 Other node attributes are based on common standards in [Three.js](https://threejs.org/) with more information found externally below:
 
 
 ## Entity Nodes
 
-When a model is added to a scene, a [group node](/docs/ref/world/nodes/Group.md) is created containing a collection of nodes which mirrors your gltf model hierarchy. It is important to be mindful of these naming conventions when working on a model in software like Blender so you can access these mesh nodes like:
+When a model is added to a scene, a [group node](/ref/group) is created containing a collection of nodes which mirrors your gltf model hierarchy. It is important to be mindful of these naming conventions when working on a model in software like Blender so you can access these mesh nodes like:
 
 `app.get(<mesh-node-name>)`
 
@@ -73,43 +73,43 @@ If you are importing a model from someplace like [Sketchfab](https://sketchfab.c
 Some nodes can/need to be created using `app.create('<node-name>')`. Information on using each node type and thier attributes can be found below:
 
 **Model**
-- [Mesh](/docs/ref/world/nodes/Mesh.md)
-- [Material](/docs/ref/world/nodes/Material.md)
-- [LOD](/docs/ref/world/nodes/LOD.md)
+- [Mesh](/ref/mesh)
+- [Material](/ref/material)
+- [LOD](/ref/lod)
 
 **Interaction**
-- [Action](/docs/ref/world/nodes/Action.md)
-- [Collider](/docs/ref/world/nodes/Collider.md)
-- [RigidBody](/docs/ref/world/nodes/RigidBody.md)
-- [Controller](/docs/ref/world/nodes/Controller.md)
+- [Action](/ref/action)
+- [Collider](/ref/collider)
+- [RigidBody](/ref/rigid-body)
+- [Controller](/ref/controller)
 
 **UI**
-- [UI](/docs/ref/world/nodes/UI.md)
-- [UIText](/docs/ref/world/nodes/UIText.md)
-- [UIViews](/docs/ref/world/nodes/UIView.md)
+- [UI](/ref/ui)
+- [UIText](/ref/ui-text)
+- [UIViews](/ref/ui-view)
 
 
 **Environment**
-- [Audio](/docs/ref/world/nodes/Audio.md)
-- [Sky](/docs/ref/world/nodes/Sky.md)
+- [Audio](/ref/audio)
+- [Sky](/ref/sky)
 
 **Generic**
-- [Group](/docs/ref/world/nodes/Group.md)
-- [Node](/docs/ref/world/nodes/Node.md)
+- [Group](/ref/group)
+- [Node](/ref/node)
 
 
 ## Player Entity
 
 Some nodes are specific to the `player` entity:
 
-- [Avatar](/docs/ref/world/nodes/Avatar.md)
-- [Joint](/docs/ref/world/nodes/Joint.md)
+- [Avatar](/ref/avatar)
+- [Joint](/ref/joint)
 
-## Examples
+{/* ## Examples
 
 [Example](/docs/examples) scripts that may help you get started can be found below:
 
-- [working?](/docs/examples/working.js) - a hello world script using [action](/docs/ref/world/nodes/Action.md) (:
+- [working?](/docs/examples/working.js) - a hello world script using [action](/docs/ref/world/nodes/Action.md) (: */}
 
 ## Lifecycle
 
