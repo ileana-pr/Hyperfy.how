@@ -31,7 +31,21 @@ export default defineConfig({
 					items: [
 						{ label: 'Hyperfy Colors', slug: 'brand/colors' },
 						{ label: '$Hyper Token', slug: 'brand/token' },
-						{ label: 'Tweets', slug: 'brand/x' },
+						{ label: 'Hyperball', slug: 'brand/hyperball' },
+					],
+				},
+				{
+					label: 'Socials',
+					items: [
+						{ label: 'Tweets', slug: 'socials/x' },
+						{ label: 'Youtube', slug: 'socials/youtube' },
+					],
+				},
+				{
+					label: 'v2 Hosting',
+					items: [
+						{ label: 'Self Hosting', slug: 'hosting/self' },
+						{ label: 'Hosting Providers', slug: 'hosting/providers' },
 					],
 				},
 				{

@@ -1,0 +1,362 @@
+---
+title: Self Hosting
+description: Self hosting Hyperfy v2 worlds.
+---
+import { Aside } from '@astrojs/starlight/components';
+
+## VPS guide by peezy
+
+
+### Deploying Your Hyperfy World
+
+<Aside type="tip">
+This guide will walk you through deploying your Hyperfy world on a VPS. Don't worry if you're new to server deployment - we'll go through it step by step!
+</Aside>
+
+
+### Initial VPS Setup
+
+Before connecting to your VPS, you need to upload an SSH key to your provider's platform.
+
+```sh frame="none"
+# Generate an SSH key if you don't have one
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Display your public key
+cat ~/.ssh/id_ed25519.pub   # On Mac/Linux
+# or
+type $env:USERPROFILE\.ssh\id_ed25519.pub   # On Windows PowerShell
+```
+
+Copy the entire key and add it to your VPS provider's dashboard.
+
+### Setting Up Your Server
+
+#### 1. Initial Connection
+```sh frame="none"
+# Connect to your VPS as root
+ssh root@your_server_ip
+```
+
+#### 2. Create a Deployment User
+```sh frame="none"
+# Create new user (replace YOUR_USERNAME with your preferred username)
+adduser YOUR_USERNAME
+usermod -aG sudo YOUR_USERNAME
+
+# Set up SSH for the new user
+mkdir -p /home/YOUR_USERNAME/.ssh
+cp ~/.ssh/authorized_keys /home/YOUR_USERNAME/.ssh/
+chown -R YOUR_USERNAME:YOUR_USERNAME /home/YOUR_USERNAME/.ssh
+chmod 700 /home/YOUR_USERNAME/.ssh
+chmod 600 /home/YOUR_USERNAME/.ssh/authorized_keys
+
+# Exit and reconnect as your user
+exit
+ssh YOUR_USERNAME@your_server_ip
+```
+
+#### 3. Secure the SSH Configuration
+
+After verifying you can log in as your user, secure the SSH service:
+
+```sh frame="none"
+# Make a backup of the original configuration
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+
+# Edit the SSH configuration
+sudo nano /etc/ssh/sshd_config
+```
+
+Make the following changes in the configuration file:
+```sh frame="none"
+# Disable root login
+PermitRootLogin no
+
+# Disable password authentication
+PasswordAuthentication no
+
+# Enable public key authentication
+PubkeyAuthentication yes
+
+# Specify which users can connect via SSH
+AllowUsers YOUR_USERNAME
+
+# Optional but recommended: Limit SSH access attempts
+MaxAuthTries 3
+```
+
+Apply the changes:
+```sh frame="none"
+# Test the configuration for syntax errors
+sudo sshd -t
+
+# Restart the SSH service
+sudo systemctl restart sshd
+```
+<Aside type="caution">
+Important: Before closing your current SSH session:
+1. Open a new terminal
+2. Try to connect with the new configuration
+3. Make sure it works before closing your working session
+</Aside>
+
+
+If something goes wrong, you can restore the backup:
+```sh frame="none"
+sudo cp /etc/ssh/sshd_config.bak /etc/ssh/sshd_config
+sudo systemctl restart sshd
+```
+
+#### 4. Install Node.js Via NVM
+```sh frame="none"
+# Install required build tools
+sudo apt update
+sudo apt install -y curl git build-essential
+
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Load NVM (or reconnect to your server)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install required Node version (22.11.0+)
+nvm install 22
+
+# Set as default
+nvm alias default 22
+```
+
+#### 4. Install PM2 and Nginx
+```sh frame="none"
+# Install PM2 globally
+npm install -g pm2
+
+# Install Nginx
+sudo apt install -y nginx
+```
+
+### Deploying Your Hyperfy World
+
+#### 1. Clone and Setup Your World
+```sh frame="none"
+# Go to your home directory
+cd ~
+
+# Clone the repository
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+cd my-world
+
+# Copy environment file
+cp .env.example .env
+
+# Install dependencies
+npm install
+```
+
+#### 2. Configure Environment Variables
+
+change the environment variables to point to your domain url
+
+```sh frame="none"
+# Edit your environment file
+nano .env
+```
+
+```sh frame="none"
+PUBLIC_WS_URL=https://YOUR_DOMAIN.com/ws
+PUBLIC_API_URL=https://YOUR_DOMAIN.com/api
+PUBLIC_ASSETS_URL=https://YOUR_DOMAIN.com/assets
+```
+
+#### 3. Start Your Application with PM2
+```sh frame="none"
+# Start the application
+pm2 start npm --name "hyperfy" --interpreter bash -- start
+
+# Set PM2 to start on system boot
+pm2 startup
+pm2 save
+```
+
+#### 4. Configure Nginx as Reverse Proxy
+```sh frame="none"
+# Remove default config
+sudo rm /etc/nginx/sites-enabled/default
+
+# Create new config (replace yourdomain.com with your actual domain)
+sudo nano /etc/nginx/sites-available/yourdomain.com
+```
+
+Add this configuration:
+```nginx
+server {
+    listen 80;
+    server_name your-domain.com;  # Change to your domain
+
+    location / {
+        proxy_pass http://localhost:3000;  # Change port if different
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        # WebSocket support
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+```
+
+Enable and start Nginx:
+```sh frame="none"
+# Enable the site
+sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
+
+# Test configuration
+sudo nginx -t
+
+# Start Nginx
+sudo systemctl restart nginx
+```
+
+#### 5. Configure Your Domain's DNS
+
+Before enabling HTTPS, you need to point your domain to your server:
+
+1. Go to your domain registrar's website (like Namecheap, GoDaddy, etc.)
+2. Find the DNS settings or DNS management section
+3. Add or modify the following records:
+   ```
+   Type  | Name  | Value
+   A     | @     | your_server_ip
+   CNAME | www   | your_domain
+   ```
+4. Save your changes
+
+DNS changes can take anywhere from a few minutes to 48 hours to propagate. You can check the propagation by going on https://dnschecker.org/ and inserting your domain. it should point to your server ip
+
+#### 6. Set Up HTTPS with Certbot
+
+Let's secure your site with a free SSL certificate from Let's Encrypt:
+
+```sh frame="none"
+# Install Certbot and its Nginx plugin
+sudo apt install certbot python3-certbot-nginx
+
+# Obtain and install the certificate
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+
+# When prompted:
+# 1. Enter your email address
+# 2. Agree to terms of service
+# 3. Choose whether to redirect HTTP to HTTPS (recommended)
+```
+
+Certbot will automatically modify your Nginx configuration to use HTTPS. It also sets up automatic renewal of your certificates.
+
+You can verify that the SSL certificate is set to auto-renew by checking the Certbot timer
+```sh frame="none"
+sudo systemctl status certbot.timer
+```
+
+#### 7. Configure Firewall
+```sh frame="none"
+# Allow SSH, HTTP, and HTTPS
+sudo ufw allow OpenSSH
+sudo ufw allow 'Nginx Full'
+
+# Enable firewall
+sudo ufw enable
+```
+
+### Updating Your World
+
+When you need to update your world:
+```sh frame="none"
+# Go to your world directory
+cd ~/my-world
+
+# Pull latest changes
+git pull
+
+# Install any new dependencies
+npm install
+
+# Restart the application
+pm2 restart hyperfy
+```
+
+### Monitoring and Troubleshooting
+
+#### View Application Status
+```sh frame="none"
+# Check status
+pm2 status
+
+# View logs
+pm2 logs hyperfy
+
+# Monitor CPU/Memory usage
+pm2 monit
+```
+
+#### Check Nginx Status
+```sh frame="none"
+# View Nginx status
+sudo systemctl status nginx
+
+# Check error logs
+sudo tail -f /var/log/nginx/error.log
+```
+
+#### Common Issues
+
+1. Port 3000 already in use:
+```sh frame="none"
+# Find what's using the port
+sudo lsof -i :3000
+
+# Kill the process
+sudo kill -9 <PID>
+```
+
+2. Node version issues:
+```sh frame="none"
+# Verify Node version
+node -v
+
+# Switch version if needed
+nvm use 22
+```
+
+3. Permission issues:
+```sh frame="none"
+# Fix ownership if needed
+sudo chown -R YOUR_USERNAME:YOUR_USERNAME ~/my-world
+```
+
+4. SSL Certificate issues:
+```sh frame="none"
+# Check certificate status
+sudo certbot certificates
+
+# Renew certificates manually if needed
+sudo certbot renew
+
+# View Certbot logs
+sudo tail -f /var/log/letsencrypt/letsencrypt.log
+```
+
+<Aside>
+Remember to check your application logs (`pm2 logs`) for any specific error messages if you encounter issues. Most problems can be diagnosed through the logs!
+</Aside>
+
+
+
+---
+
