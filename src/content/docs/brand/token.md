@@ -5,10 +5,19 @@ description: $Hyper Token on Solana
 
 [$HYPER Token](https://token.hyperfy.xyz/) on Solana
 
+**CA:**
+```sh frame="none"
+8vBMibwpn8wpfYKbQ9xqzodymg3LjmYec2tSNGRy23K8
 
-CA: 8vBMibwpn8wpfYKbQ9xqzodymg3LjmYec2tSNGRy23K8
+```
+
 
 [Hyper on Dexscreener](https://dexscreener.com/solana/cs94de2znqtyxcftfdfpsejkphbdsvzevkhloykmx7ge)
+
+
+
+[![Hyper](/assets/logoCircle.webp)](/assets/logoCircle.webp)
+
 
 ---
 
