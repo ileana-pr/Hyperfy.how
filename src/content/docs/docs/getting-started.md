@@ -18,6 +18,8 @@ Follow the [scripting guide](/docs/scripts/) to get started adding interactivty 
 ### [Commands](/docs/commands/)
 Give yourself priviledges with `/admin <admin-key>`. Additional commands can be found in [commands.md.](/docs/commands/)
 
+---
+
 ### [API Reference](/docs/ref/)
 
 Information about Hyperfy's global API's can be found in the [reference directory](/docs/ref/).
@@ -26,10 +28,23 @@ Information about Hyperfy's global API's can be found in the [reference director
 
 Script examples to help you get started can be found in the [example directory](https://github.com/wyattlovesgrapes/hyperfy/tree/docs-feb-2-25/docs/examples). -->
 
+---
+
 ### [Community Assets](/community/assets)
 
 Some GLTF models that are ready to drag and drop into your hyperfy world like the [hyperDuck.glb](/community/assets/) can be found in the [assets directory](/community/assets/).
 
-### [FAQ](/welcome/faq)
+---
+
+### [Hyperworld.host App Marketplace](https://hyperworld.host/marketplace)
+
+Check out some ready made Apps to drag 'n drop into your world! 🚀
+
+
+---
+
+### [FAQs](/welcome/faq)
 
 If you run into problems please feel free to join our [Discord](https://discord.gg/KbgAua7XXS) to ask for help, but some issues others have run into are documented in the [FAQ](/welcome/faq).
+
+---
