@@ -7,8 +7,14 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
+			editLink: {
+				baseUrl: 'https://github.com/Innkeeping/theHype/edit/main/docs/',
+			},
 			title: 'Hyperfy.how',
-			favicon: '/favicon.svg',
+			logo: {
+        src: './src/assets/hyperfy-logo.svg',
+      },
+			favicon: '/public/favicon.svg',
 			customCss: [
         './src/styles/custom.css',
 			],
