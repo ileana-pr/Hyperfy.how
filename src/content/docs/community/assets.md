@@ -6,7 +6,7 @@ description: Collection of community assets for Hyperfy v2.
 
 ## Hyperduck.
 
-[Hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/public/assets/hyperduck.glb)
+[Hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/tree/main/public/assets/hyperduck.glb)
 
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -19,7 +19,7 @@ description: Collection of community assets for Hyperfy v2.
 
 ## $Hyper
 
-[Hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/public/assets/$HYPER.glb)
+[$HYPER.glb](https://github.com/Innkeeping/Hyperfy.how/tree/main/public/assets/$HYPER.glb)
 
 
 <model-viewer src="/assets/$HYPER.glb" alt="$Hyper" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
