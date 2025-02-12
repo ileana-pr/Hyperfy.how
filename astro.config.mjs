@@ -81,6 +81,7 @@ export default defineConfig({
 								{ label: 'Scripts', slug: 'docs/scripts' },
 								{ label: '.hyp Format', slug: 'docs/hyp-format' },
 								{ label: 'Blender Exporter', slug: 'docs/blender-exporter' },
+								{ label: 'Global num Method', slug: 'docs/num-method' },
 
 						{
 							label: 'ref',
