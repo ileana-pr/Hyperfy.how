@@ -8,7 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			editLink: {
-				baseUrl: 'https://github.com/Innkeeping/theHype/edit/main/docs/',
+				baseUrl: 'https://github.com/Innkeeping/Hyperfy.how/edit/main/',
 			},
 			title: 'Hyperfy.how',
 			logo: {
