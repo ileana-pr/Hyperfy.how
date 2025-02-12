@@ -8,6 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Hyperfy.how',
+			favicon: '/favicon.svg',
 			customCss: [
         './src/styles/custom.css',
 			],

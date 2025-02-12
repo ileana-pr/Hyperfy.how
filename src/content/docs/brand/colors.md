@@ -4,10 +4,10 @@ description: Hyperfy Brand Guides
 ---
 
 ### Hyperfy Brand Colors
-[![Hyperfy Brand Colors](/assets/hyperfy-brand-colors.webp)](/assets/hyperfy-brand-colors.webp)
+[![Hyperfy Brand Colors](/assets/brandColors.webp)](/assets/brandColors.webp)
 
 ### Hyperfy Hex
-[![Hyperfy Hex](/assets/hyperfy-hex.webp)](/assets/hyperfy-hex.webp)
+[![Hyperfy Hex](/assets/brandHex.webp)](/assets/brandHex.webp)
 
 ---
 
