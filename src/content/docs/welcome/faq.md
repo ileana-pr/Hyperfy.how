@@ -3,7 +3,7 @@ title: FAQs
 description: Frequently Asked Questions for Hyperfy v2.
 ---
 
-### 1. When I drag and drop a model into a world nothing happens?
+### When I drag and drop a model into a world nothing happens?
 
 One of the following issues is likely occuring:
 
@@ -18,3 +18,10 @@ cp .env.example .env
 
 3. There is currently an error involving some models with draco textures. Please try with the model included in this repo at: [hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/hyperduck.glb)
 
+---
+
+### I need a random number.  Math.random() has security issues.  What should I do?
+
+Use our [global `num` method](/docs/num-method) created just for that.
+
+---
