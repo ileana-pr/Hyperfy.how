@@ -360,3 +360,146 @@ Remember to check your application logs (`pm2 logs`) for any specific error mess
 
 ---
 
+## Deploy a v2 world to [Digital Ocean](https://github.com/hyperfy-xyz/hyperfy/wiki/Deploy-a-world-(Digital-Ocean)) - by Ash
+
+
+This is a quick and dirty guide to getting a world up and running on digital ocean, using cloudflare to point your own domain at the world with SSL enabled.
+
+### 1. Create droplet
+Create your droplet in digital ocean. For this example i'm using a cheap $6/mo droplet which should be plenty for basic worlds:
+
+- 1 GB Ram
+- Regular SSD
+
+Make sure to set up SSH access you can shell into the server.
+
+Once set up, Digital Ocean gives you the IP address of your droplet.
+
+### 2. SSH into droplet
+
+```sh frame="none"
+ssh root@<ip-address>
+```
+
+
+### 3. Create working directory & clone repo
+
+```sh frame="none"
+sudo mkdir -p /var/www/
+cd /var/www/
+git clone https://github.com/hyperfy-xyz/hyperfy.git
+cd hyperfy
+```
+
+optionally make this your default ssh directory
+
+```sh frame="none"
+nano ~/.bashrc
+```
+
+and add `cd /var/www/hyperfy` to the bottom of the file
+
+### 4. Install node
+
+```sh frame="none"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+nvm install 22.11.0
+nvm use
+```
+
+If you run into 'nvm not found' or similar, reboot shell or just exit ssh and re-ssh in
+
+### 5. Configure .env
+
+```sh frame="none"
+cp .env.example .env
+nano .env
+```
+
+Change the urls to use the public domain host that you'll be setting up later with cloudflare
+
+### 6. Install and Start the world
+```sh frame="none"
+npm install
+npm run build
+```
+
+Also install pm2. This will restart the world automatically if it crashes for some reason.
+
+```sh frame="none"
+npm install pm2 -g
+```
+
+Then start the world with:
+
+```sh frame="none"
+pm2 start "npm run start" --name=app
+```
+
+You can see logs by running `pm2 log` and restart the server with `pm2 restart app` etc.
+
+### 7. Setup NGINX
+
+```sh frame="none"
+sudo apt update
+sudo apt install nginx
+sudo ufw allow 'Nginx Full'
+sudo nano /etc/nginx/sites-available/hyperfy
+```
+
+Paste this basic setup into nano, making sure to change your domain
+
+```nginx
+server {
+    listen 80;
+    server_name mydomain.xyz;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /api/upload {
+        client_max_body_size 50m;
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+Then symlink this site to enabled:
+
+```sh frame="none"
+sudo ln -s /etc/nginx/sites-available/hyperfy /etc/nginx/sites-enabled/
+```
+
+Check the nginx is valid and restart nginx
+
+```sh frame="none"
+sudo nginx -t
+sudo systemctl restart nginx
+```
+
+
+### 8. Configure cloudflare
+Assuming you already have your domain and DNS managed by cloudflare, go to the DNS page of your domain.
+
+Add a new DNS entry:
+
+- Type: A
+- Name: either a subdomain or the full domain, depending on where you want the world
+- Content:
+- Proxied: yes
+
+<Aside>
+That's it!
+Your world should now be accessible via the domain you set up!
+</Aside>
