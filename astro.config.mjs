@@ -14,7 +14,7 @@ export default defineConfig({
 			logo: {
         src: './src/assets/hyperfy-logo.svg',
       },
-			favicon: '/favicon.svg',
+			favicon: '/assets/favicon.svg',
 			customCss: [
         './src/styles/custom.css',
 			],
@@ -51,7 +51,14 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Quick Start',
+					label: 'Community',
+					items: [
+						{ label: 'Community Assets', slug: 'community/assets' },
+						{ label: 'Projects', slug: 'community/projects' },
+					],
+				},
+				{
+					label: 'Quick Start 🚀',
 					items: [
 						{ label: 'Installation', slug: 'quickstart/installation' },
 					],
@@ -61,12 +68,6 @@ export default defineConfig({
 					items: [
 						{ label: 'Self Hosting', slug: 'hosting/self' },
 						{ label: 'Hosting Providers', slug: 'hosting/providers' },
-					],
-				},
-				{
-					label: 'Community Assets',
-					items: [
-						{ label: 'Hyperduck', slug: 'community/assets' },
 					],
 				},
 				{
