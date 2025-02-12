@@ -14,7 +14,7 @@ export default defineConfig({
 			logo: {
         src: './src/assets/hyperfy-logo.svg',
       },
-			favicon: '/public/favicon.svg',
+			favicon: '/favicon.svg',
 			customCss: [
         './src/styles/custom.css',
 			],
