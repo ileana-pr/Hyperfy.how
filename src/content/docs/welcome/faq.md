@@ -16,5 +16,5 @@ cp .env.example .env
 
 ```
 
-3. There is currently an error involving some models with draco textures. Please try with the model included in this repo at: [hyperfy.glb](/docs/hyperfy.glb)
+3. There is currently an error involving some models with draco textures. Please try with the model included in this repo at: [hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/hyperduck.glb)
 
