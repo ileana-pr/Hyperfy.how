@@ -1,14 +1,7 @@
 ---
-title: Entity/App
-description: Docs for world/entity/app in Hyperfy v2.
+title: App
+description: Global app variable in Hyperfy v2.
 ---
-import { Aside } from '@astrojs/starlight/components';
-
-<Aside type="caution">
-From [2 Feb 25](https://github.com/wyattlovesgrapes/hyperfy/blob/docs-feb-2-25/docs/ref/world/entity/App.md)  - things move fast - may change from in-alpha
-</Aside>
-
-# App
 
 The global `app` variable is always available within the app scripting runtime.
 
@@ -69,3 +62,7 @@ Creates and returns a node of the specified name.
 #### `.control(options)`: Control
 
 TODO: provides control to a client to respond to inputs and move the camera etc
+
+#### `.configure(fields)`
+
+Configures custom UI for your app. See [Props](/ref/Props.md) for more info.

@@ -32,22 +32,23 @@ export default defineConfig({
 						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
 						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
 						{ label: 'FAQs', slug: 'welcome/faq' },
-					],
-				},
-				{
-					label: 'Brand & Token',
-					items: [
-						{ label: 'Hyperfy Colors', slug: 'brand/colors' },
-						{ label: '$Hyper Token', slug: 'brand/token' },
-						{ label: 'Hyperball', slug: 'brand/hyperball' },
-					],
-				},
-				{
-					label: 'Socials',
-					items: [
-						{ label: 'Tweets', slug: 'socials/x' },
-						{ label: 'Youtube', slug: 'socials/youtube' },
-						{ label: 'Bluesky', slug: 'socials/bluesky' },
+
+						{
+							label: 'Brand & Token',
+							items: [
+								{ label: 'Hyperfy Colors', slug: 'brand/colors' },
+								{ label: '$Hyper Token', slug: 'brand/token' },
+								{ label: 'Hyperball', slug: 'brand/hyperball' },
+							],
+						},
+						{
+							label: 'Socials',
+							items: [
+								{ label: 'Tweets', slug: 'socials/x' },
+								{ label: 'Youtube', slug: 'socials/youtube' },
+								{ label: 'Bluesky', slug: 'socials/bluesky' },
+							],
+						},
 					],
 				},
 				{
@@ -55,6 +56,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Community Assets', slug: 'community/assets' },
 						{ label: 'Projects', slug: 'community/projects' },
+						{ label: 'Videos', slug: 'community/videos' },
 					],
 				},
 				{
@@ -71,21 +73,45 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Docs',
+					items: [
+								{ label: 'Getting Started', slug: 'docs/getting-started' },
+								{ label: 'Models', slug: 'docs/models' },
+								{ label: 'Commands', slug: 'docs/commands' },
+								{ label: 'Scripts', slug: 'docs/scripts' },
+								{ label: '.hyp Format', slug: 'docs/hyp-format' },
+								{ label: 'Blender Exporter', slug: 'docs/blender-exporter' },
+
+						{
+							label: 'ref',
+							items: [
+								// Each item here is one entry in the navigation menu.
+								{ label: 'ref Index', slug: 'docs/ref' },
+								{ label: 'Action', slug: 'ref/action' },
+								{ label: 'App', slug: 'ref/app' },
+								{ label: 'Audio', slug: 'ref/audio' },
+								{ label: 'Collider', slug: 'ref/collider' },
+								{ label: 'Group', slug: 'ref/group' },
+								{ label: 'LOD', slug: 'ref/lod' },
+								{ label: 'Material', slug: 'ref/material' },
+								{ label: 'Mesh', slug: 'ref/mesh' },
+								{ label: 'Node', slug: 'ref/node' },
+								{ label: 'Props', slug: 'ref/props' },
+								{ label: 'RigidBody', slug: 'ref/rigid-body' },
+								{ label: 'UI', slug: 'ref/ui' },
+								{ label: 'UIText', slug: 'ref/ui-text' },
+								{ label: 'UIView', slug: 'ref/ui-view' },
+								{ label: 'World', slug: 'ref/world' },
+							],
+						},
+					],
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Getting Started', slug: 'guides/getting-started' },
-						{ label: 'Docs', slug: 'guides/docs' },
-						{ label: 'Blender Exporter', slug: 'guides/blender-exporter' },
-						{ label: 'Optimizing Assets', slug: 'guides/optimizing-assets' },
-						{ label: 'ref/World', slug: 'guides/world' },
-						{ label: 'Entity/App', slug: 'guides/entity' },
-						{ label: '.hyp App Format', slug: 'guides/hyp-app-format' },
-						{ label: 'Nodes', slug: 'guides/nodes' },
-						{ label: 'Models', slug: 'guides/models' },
-						{ label: 'Commands', slug: 'guides/commands' },
-						{ label: 'Scripts', slug: 'guides/scripts' },
-						{ label: 'Videos', slug: 'guides/videos' },
+						{ label: 'Optimizing Assets', slug: 'guides/optimizing' },
+						// { label: 'Docs', slug: 'guides/docs' },
 					],
 				},
 				{

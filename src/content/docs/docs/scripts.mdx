@@ -9,7 +9,7 @@ import { Aside } from '@astrojs/starlight/components';
 <Aside type="caution">
  **IMPORTANT**
 
-As Hyperfy is in alpha, the scripting API is likely to evolve fast with breaking changes.  [This is from 2 Feb 25](https://github.com/wyattlovesgrapes/hyperfy/blob/docs-feb-2-25/docs/scripts.md)
+As Hyperfy is in alpha, the scripting API is likely to evolve fast with breaking changes.  [This is from 2 Feb 25](https://github.com/hyperfy-xyz/hyperfy/tree/main/docs)
 
 
 This means your apps can and will break as you upgrade worlds.
@@ -35,16 +35,22 @@ Worlds contain:
 
 Certain `entity` and `node` attributes within a world can be accesed from the global world API:
 
-- [world](/docs/ref/world/World.md)
+- [world](/guides/world)
 
-## Global Entites
+## Global Entities
 
 Apps run inside their own secure environment, which allow apps built by many different authors to co-exist in a real-time digital world.
 
 Just as websites run inside a DOM-based environment that provides browser APIs via globals, apps are provided with specific APIs for the global app and player entities:
 
-- [app](/docs/ref/world/entity/App.md)
-- [player](/docs/ref/world/entity/Player.md)
+- [app](/docs/ref/App.md)
+- [props](/docs/ref/Props.md)
+- [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [Vector3](https://threejs.org/docs/#api/en/math/Vector3)
+- [Quaternion](https://threejs.org/docs/#api/en/math/Quaternion)
+- [Euler](https://threejs.org/docs/#api/en/math/Euler)
+- [Matrix4](https://threejs.org/docs/#api/en/math/Matrix4)
+
 
 ## Nodes
 
@@ -53,10 +59,6 @@ Nodes contain certain default attributes that are inherited by all other nodes s
 
 Other node attributes are based on common standards in [Three.js](https://threejs.org/) with more information found externally below:
 
-- [Vector3](https://threejs.org/docs/#api/en/math/Vector3)
-- [Quaternion](https://threejs.org/docs/#api/en/math/Quaternion)
-- [Euler](https://threejs.org/docs/#api/en/math/Euler)
-- [Matrix4](https://threejs.org/docs/#api/en/math/Matrix4)
 
 ## Entity Nodes
 
