@@ -28,7 +28,7 @@ description: Collection of community assets for Hyperfy v2.
 
 ## Hyperfy Logo Graded
 
-[HyperfyLogoGrad.glb](https://github.com/Innkeeping/Hyperfy.how/blob/5d3ab51868a7e562412453c6f4a4d2a5625fb1f4/public/assets/%24HYPER.glb)
+[HyperfyLogoGrad.glb](https://github.com/Innkeeping/Hyperfy.how/blob/5575b7487b0a8bfe9f5bfda8300d824a466e4caa/public/assets/HyperfyLogoGrad.glb)
 
 <model-viewer src="/assets/HyperfyLogoGrad.glb" alt="$HyperGraded" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
 
