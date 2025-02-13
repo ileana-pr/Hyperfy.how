@@ -7,6 +7,7 @@ The following are some useful resources for creating and customizing avatars:
 
 ### Creators
 
+* **[Character Studio by M3](https://github.com/M3-org/CharacterStudio)**: Open source web based custom VRM avatar creation platform
 * **[Union Avatars](https://unionavatars.com/)**: Create custom avatars for virtual worlds and social platforms
 * **[VRoid Studio](https://vroid.com/en/studio)**: Create and customize 3D avatars in anime style
 * **[VKET Avatar Maker](https://avatarmaker.vket.com/)**: Easy-to-use avatar creation platform
@@ -28,3 +29,4 @@ The following are some useful resources for creating and customizing avatars:
 ### Guides
 
 * **[Creating Avatars with VRM Assets](https://docs.monaverse.com/create/creating-avatars)**: Guide to creating custom avatars using VRM assets by Mona.
+* **[Making emotes for NPCs](/community/videos#making-emotes-for-npcs)**: Emotes are used to express emotions through character actions.
