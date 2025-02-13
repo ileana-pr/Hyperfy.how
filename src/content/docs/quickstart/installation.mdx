@@ -5,6 +5,7 @@ description: Quick start to get building in Hyperfy v2.
 import { Icon } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
+import GithubCard from "astro-github-component";
 
 ## Prerequisites
 
@@ -40,11 +41,12 @@ npm install
 npm run dev
 
 ```
-
 ---
 
-<Card title="Hyperfy v2 Repo" icon="github">
-[Hyperfy v2 Repo](https://github.com/hyperfy-xyz/hyperfy)
+
+<Card title="Hyperfy v2 Repo" icon="star">
+
+<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
 
 [Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
 </Card>

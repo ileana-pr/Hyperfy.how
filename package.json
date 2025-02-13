@@ -13,6 +13,7 @@
     "@astrojs/starlight": "^0.31.1",
     "astro": "^5.1.5",
     "astro-embed": "^0.9.0",
+    "astro-github-component": "^1.0.4",
     "components": "link:astrojs/starlight/components",
     "sharp": "^0.32.5"
   }
