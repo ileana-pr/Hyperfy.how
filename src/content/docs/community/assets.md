@@ -34,3 +34,11 @@ description: Collection of community assets for Hyperfy v2.
 
 ---
 
+## Hyperfyzz Truck
+
+[Hyperfyzz-truck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/Hyperfyzz-truck.glb)
+
+<model-viewer src="/assets/Hyperfyzz-truck.glb" alt="Hypertruck" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
+
+---
+
