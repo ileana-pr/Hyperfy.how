@@ -3,6 +3,15 @@ title: FAQs
 description: Frequently Asked Questions for Hyperfy v2.
 ---
 
+### Where do I get started in v2?
+
+For inspiration, head over to [v2 Sandbox](https://play.hyperfy.xyz/)
+
+When you're ready to make your own, hop in [Quick Start](/quickstart/installation)
+
+
+---
+
 ### When I drag and drop a model into a world nothing happens?
 
 One of the following issues is likely occuring:
