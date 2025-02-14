@@ -3,6 +3,7 @@ title: Community Assets
 description: Collection of community assets for Hyperfy v2.
 ---
 
+Assets here are optimized.  Click the name, download raw.  Drag into your world.
 
 ## Hyperduck.
 
