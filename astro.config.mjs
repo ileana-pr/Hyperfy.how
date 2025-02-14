@@ -54,6 +54,7 @@ export default defineConfig({
 				{
 					label: 'Community',
 					items: [
+						{ label: 'Open Source Contributors', slug: 'community/contributors' },
 						{ label: 'Community Assets', slug: 'community/assets' },
 						{ label: 'Projects', slug: 'community/projects' },
 						{ label: 'Videos', slug: 'community/videos' },
