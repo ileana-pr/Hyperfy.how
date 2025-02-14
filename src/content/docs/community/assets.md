@@ -37,6 +37,8 @@ Assets here are optimized.  Click the name, download raw.  Drag into your world.
 
 ## Hyperfyzz Truck
 
+[Download the .hyp and drag into your world.](https://github.com/Innkeeping/Hyperfy.how/blob/main/src/assets/hyps/Hyperfyzz-truck.hyp)
+
 [Hyperfyzz-truck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/Hyperfyzz-truck.glb)
 
 <model-viewer src="/assets/Hyperfyzz-truck.glb" alt="Hypertruck" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
