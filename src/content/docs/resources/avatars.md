@@ -28,5 +28,6 @@ The following are some useful resources for creating and customizing avatars:
 
 ### Guides
 
-* **[Creating Avatars with VRM Assets](https://docs.monaverse.com/create/creating-avatars)**: Guide to creating custom avatars using VRM assets by Mona.
+* **[Creating Avatars with VRM Assets | Mona](https://docs.monaverse.com/create/creating-avatars)**: Guide to creating custom avatars using VRM assets by Mona.
 * **[Making emotes for NPCs](/community/videos#making-emotes-for-npcs)**: Emotes are used to express emotions through character actions.
+* ** [Using 'VRM for Blender' for Rigging | Mona](https://docs.monaverse.com/create/creating-avatars/creating-your-avatar-using-vrm-for-blender/using-vrm-for-blender-for-rigging)

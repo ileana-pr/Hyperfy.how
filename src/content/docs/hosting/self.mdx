@@ -7,6 +7,8 @@ import { LinkPreview } from 'astro-embed';
 import { Badge } from '@astrojs/starlight/components';
 
 
+[Fly.io](/hosting/self/#fly.io)
+
 [VPS](/hosting/self/#VPS)
 
 [Digital Ocean](/hosting/self/#Digital-Ocean)
@@ -14,6 +16,62 @@ import { Badge } from '@astrojs/starlight/components';
 [Oracle](/hosting/self#oracle-free-server)
 
 [Coolify](/hosting/self#oracle-free-server)
+
+
+
+---
+
+## Fly.io
+
+[Install Hyperfy v2 via Quick Start](/quickstart/installation/#install)
+
+Add this as `fly.toml` in the root folder of your project (`my-world`)
+change 'yourappname' to your project name (`my-world`) and Save.
+
+```sh frame="none"
+
+app = '[yourappname]'
+primary_region = 'ams'
+
+[env]
+  NODE_ENV = "production"
+  WORLD = "world"
+  PORT = "3000"
+  JWT_SECRET = "hyper"
+  ADMIN_CODE = "qwerty"
+  SAVE_INTERVAL = "60"
+  PUBLIC_MAX_UPLOAD_SIZE = "12"
+  PUBLIC_WS_URL = "https://[yourappname].fly.dev/ws"
+  PUBLIC_API_URL = "https://[yourappname].fly.dev/api"
+  PUBLIC_ASSETS_URL = "https://[yourappname].fly.dev/assets"
+
+[mounts]
+  source = 'data'
+  destination = '/app/world'
+  auto_extend_size_threshold = 80
+  auto_extend_size_increment = '1GB'
+  auto_extend_size_limit = '10GB'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+```
+
+Make an account on [Fly.io](https://fly.io/)
+
+In the terminal `cd my-world` and run `fly deploy`
+
 
 ---
 
