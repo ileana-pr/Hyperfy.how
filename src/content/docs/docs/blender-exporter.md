@@ -3,6 +3,8 @@ title: Blender Exporter
 description: Blender script for auto-exports of individual object.
 ---
 
+### Blender Script
+
 If you are building any kind of kit sets in blender and have a bunch of objects all spread out, The following blender script auto-exports each individual object, properly centering each object at its own origin.
 It will also ignore hidden objects, and automatically enable "custom properties" on the gltf export so that you can export colliders etc.
 
@@ -51,3 +53,11 @@ bpy.context.view_layer.objects.active = orig_active
 ```
 
 To use it, go to the scripting tab in blender, click + New, paste it in, and hit the play button to run it.
+
+---
+
+### Hyperfy Tools
+
+Also check out [Hyperfy Tools - Blender Add-on](/resources/3d/#hyperfy-tools)
+
+---
