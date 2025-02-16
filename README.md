@@ -28,6 +28,10 @@ pnpm dev
 http://localhost:4321/
 
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/innkeeping/hyperfy.how/tree/main/)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/innkeeping/hyperfy.how/tree/main/)
+
+
 ---
 ---
 
