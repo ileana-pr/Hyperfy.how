@@ -113,7 +113,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Optimizing Assets', slug: 'guides/optimizing' },
-						// { label: 'Docs', slug: 'guides/docs' },
+						{ label: 'Video Tutorials', slug: 'guides/video-tutorials' },
 					],
 				},
 				{
