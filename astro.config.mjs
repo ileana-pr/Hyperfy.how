@@ -88,7 +88,7 @@ export default defineConfig({
 							label: 'ref',
 							items: [
 								// Each item here is one entry in the navigation menu.
-								{ label: 'ref Index', slug: 'docs/ref' },
+								{ label: '-Index', slug: 'ref/folder' },
 								{ label: 'Action', slug: 'ref/action' },
 								{ label: 'App', slug: 'ref/app' },
 								{ label: 'Audio', slug: 'ref/audio' },
