@@ -14,6 +14,23 @@ On 'guides' and up to 'welcome' section, you will need to add to astro.config.mj
 
 ---
 
+Fork and clone
+
+```sh frame="none"
+git clone [your-repo-url]
+cd [your-repo-name]
+```
+
+```sh frame="none"
+pnpm install
+pnpm dev
+```
+http://localhost:4321/
+
+
+---
+---
+
 ### Starlight on Astro
 
 Site is built using [Starlight on Astro](https://starlight.astro.build/)
