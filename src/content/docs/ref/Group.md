@@ -9,4 +9,4 @@ A regular old node with no other behavior. Useful for grouping things together u
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node.md) properties
+Inherits all [Node](/ref/Node) properties

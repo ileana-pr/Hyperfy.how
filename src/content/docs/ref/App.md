@@ -24,7 +24,7 @@ The servers state object is sent to all new clients that connect in their initia
 
 ### `.{...Node}`
 
-Inherits all [Node](/docs/ref/Node.md) properties
+Inherits all [Node](/ref/Node) properties
 
 ## Methods
 
@@ -65,4 +65,4 @@ TODO: provides control to a client to respond to inputs and move the camera etc
 
 #### `.configure(fields)`
 
-Configures custom UI for your app. See [Props](/ref/Props.md) for more info.
+Configures custom UI for your app. See [Props](/ref/Props) for more info.

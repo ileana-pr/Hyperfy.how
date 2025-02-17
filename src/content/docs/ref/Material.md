@@ -3,7 +3,7 @@ title: Material
 description: A material on a Mesh node.
 ---
 
-A material on a [Mesh](/ref/Mesh.md) node.
+A material on a [Mesh](/ref/Mesh) node.
 
 ## Properties
 

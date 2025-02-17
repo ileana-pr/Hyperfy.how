@@ -82,7 +82,6 @@ export default defineConfig({
 								{ label: 'Scripts', slug: 'docs/scripts' },
 								{ label: '.hyp Format', slug: 'docs/hyp-format' },
 								{ label: 'Blender Exporter', slug: 'docs/blender-exporter' },
-								{ label: 'Global num Method', slug: 'docs/num-method' },
 
 						{
 							label: 'ref',
@@ -98,6 +97,7 @@ export default defineConfig({
 								{ label: 'Material', slug: 'ref/material' },
 								{ label: 'Mesh', slug: 'ref/mesh' },
 								{ label: 'Node', slug: 'ref/node' },
+								{ label: 'Num', slug: 'ref/num' },
 								{ label: 'Props', slug: 'ref/props' },
 								{ label: 'RigidBody', slug: 'ref/rigid-body' },
 								{ label: 'UI', slug: 'ref/ui' },

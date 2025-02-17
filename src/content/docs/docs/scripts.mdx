@@ -9,7 +9,7 @@ import { Aside } from '@astrojs/starlight/components';
 <Aside type="caution">
  **IMPORTANT**
 
-As Hyperfy is in alpha, the scripting API is likely to evolve fast with breaking changes.  [This is from 2 Feb 25](https://github.com/hyperfy-xyz/hyperfy/tree/main/docs)
+As Hyperfy is in alpha, the scripting API is likely to evolve fast with breaking changes.  [This is up to date with latest dev branch docs as of 16 Feb 25](https://github.com/hyperfy-xyz/hyperfy/commit/0aa08dc26a762246533b22549cd0236a1070cdcb)
 
 
 This means your apps can and will break as you upgrade worlds.
@@ -46,6 +46,7 @@ Just as websites run inside a DOM-based environment that provides browser APIs v
 - [app](/ref/app)
 - [props](/ref/props)
 - [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [num](/ref/num)
 - [Vector3](https://threejs.org/docs/#api/en/math/Vector3)
 - [Quaternion](https://threejs.org/docs/#api/en/math/Quaternion)
 - [Euler](https://threejs.org/docs/#api/en/math/Euler)
@@ -62,7 +63,7 @@ Other node attributes are based on common standards in [Three.js](https://threej
 
 ## Entity Nodes
 
-When a model is added to a scene, a [group node](/ref/group) is created containing a collection of nodes which mirrors your gltf model hierarchy. It is important to be mindful of these naming conventions when working on a model in software like Blender so you can access these mesh nodes like:
+When a model is added to a scene, a [group node](ref/group) is created containing a collection of nodes which mirrors your gltf model hierarchy. It is important to be mindful of these naming conventions when working on a model in software like Blender so you can access these mesh nodes like:
 
 `app.get(<mesh-node-name>)`
 

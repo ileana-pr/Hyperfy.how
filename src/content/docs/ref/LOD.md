@@ -9,7 +9,7 @@ A LOD can hold multiple child nodes and automatically activate/deactivate them b
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node.md) properties
+Inherits all [Node](/ref/Node) properties
 
 ## Methods
 

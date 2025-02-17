@@ -2,7 +2,7 @@
 title: World
 description: The global `world` variable is always available within the app scripting runtime.
 ---
-import { Aside } from '@astrojs/starlight/components';
+
 
 The global `world` variable is always available within the app scripting runtime.
 

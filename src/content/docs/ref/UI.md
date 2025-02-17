@@ -91,4 +91,4 @@ Defaults to `0`.
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node.md) properties
+Inherits all [Node](/ref/Node) properties
