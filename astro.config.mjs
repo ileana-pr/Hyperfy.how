@@ -32,9 +32,20 @@ export default defineConfig({
 						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
 						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
 						{ label: 'FAQs', slug: 'welcome/faq' },
+					],
+				},
+				{
+					label: 'Community',
+					collapsed: true,
+					items: [
+						{ label: 'Open Source Contributors', slug: 'community/contributors' },
+						{ label: 'Community Assets', slug: 'community/assets' },
+						{ label: 'Projects', slug: 'community/projects' },
+						{ label: 'Videos', slug: 'community/videos' },
 
 						{
 							label: 'Brand & Token',
+							collapsed: true,
 							items: [
 								{ label: 'Hyperfy Colors', slug: 'brand/colors' },
 								{ label: '$Hyper Token', slug: 'brand/token' },
@@ -43,21 +54,13 @@ export default defineConfig({
 						},
 						{
 							label: 'Socials',
+							collapsed: true,
 							items: [
 								{ label: 'Tweets', slug: 'socials/x' },
 								{ label: 'Youtube', slug: 'socials/youtube' },
 								{ label: 'Bluesky', slug: 'socials/bluesky' },
 							],
 						},
-					],
-				},
-				{
-					label: 'Community',
-					items: [
-						{ label: 'Open Source Contributors', slug: 'community/contributors' },
-						{ label: 'Community Assets', slug: 'community/assets' },
-						{ label: 'Projects', slug: 'community/projects' },
-						{ label: 'Videos', slug: 'community/videos' },
 					],
 				},
 				{
@@ -68,6 +71,7 @@ export default defineConfig({
 				},
 				{
 					label: 'v2 Hosting',
+					collapsed: true,
 					items: [
 						{ label: 'Self Hosting', slug: 'hosting/self' },
 						{ label: 'Hosting Providers', slug: 'hosting/providers' },
@@ -75,6 +79,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Docs',
+					collapsed: true,
 					items: [
 								{ label: 'Getting Started', slug: 'docs/getting-started' },
 								{ label: 'Models', slug: 'docs/models' },
@@ -118,6 +123,7 @@ export default defineConfig({
 
 						{
 							label: 'Coding',
+							collapsed: true,
 							items: [
 
 								{ label: 'Coding Resources', slug: 'guides/coding' },
@@ -127,6 +133,7 @@ export default defineConfig({
 
 						{
 							label: '3D-Design',
+							collapsed: true,
 							items: [
 
 								{ label: 'Optimizing Assets', slug: 'guides/3d/optimizing' },
@@ -138,6 +145,7 @@ export default defineConfig({
 						},
 						{
 							label: 'AI Agents',
+							collapsed: true,
 							items: [
 
 								{ label: 'Agents', slug: 'guides/ai/agents' },
@@ -145,6 +153,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Web3',
+							collapsed: true,
 							items: [
 
 								{ label: 'Web3 General', slug: 'guides/web3' },
@@ -154,6 +163,7 @@ export default defineConfig({
 						},
 						{
 							label: 'WebXR',
+							collapsed: true,
 							items: [
 
 								{ label: 'WebXR General', slug: 'guides/webxr' },
