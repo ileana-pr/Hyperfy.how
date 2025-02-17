@@ -4,13 +4,12 @@ Hyperfy.how is a living community resource for [Hyperfy v2.](https://github.com/
 
 It will continue to evolve as Hyperfy v2 progresses. (with your help! 🚀)
 
-Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  (be sure to start with frontmatter format of all others)
+Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  Be sure to start with frontmatter format of all others, for templates go to `src/templates` and copy paste into appropriate folder.  Add folder if needed.
 
-Sidebar and page link will autogenerate on 'resources' section based on the frontmatter title of the file in the 'resources' folder.
 
-'resources' sidebar will be in order based on the .md/.mdx file name.
+For sidebar and routing, you will need to add to astro.config.mjs. Order is based on astro.config.mjs.  Easiest is to copy from above and edit.  You can have nested sidebars.  You can have an index.md/mdx in a nested folder.
 
-On 'guides' and up to 'welcome' section, you will need to add to astro.config.mjs. Order is based on astro.config.mjs.  Easiest is to copy from above and edit.  You can have nested sidebars.
+For example, `guides/web3` will direct to `guides/web3/index`.  You don't need to say index, and it will url to guides/web3.
 
 ---
 
