@@ -112,14 +112,61 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Optimizing Assets', slug: 'guides/optimizing' },
 						{ label: 'Video Tutorials', slug: 'guides/video-tutorials' },
+						{ label: 'Community HackMDs', slug: 'guides/hackmd' },
+						{ label: 'Various Articles', slug: 'guides/articles' },
+
+						{
+							label: 'Coding',
+							items: [
+
+								{ label: 'Coding Resources', slug: 'guides/coding' },
+								{ label: 'Coding with AI', slug: 'guides/coding/ai' },
+							],
+						},
+
+						{
+							label: '3D-Design',
+							items: [
+
+								{ label: 'Optimizing Assets', slug: 'guides/3d/optimizing' },
+								{ label: 'Avatars', slug: 'guides/3d/avatars' },
+								{ label: 'Models', slug: 'guides/3d/models' },
+								{ label: 'Blender', slug: 'guides/3d/blender' },
+								{ label: 'Other tools', slug: 'guides/3d/tools' },
+							],
+						},
+						{
+							label: 'AI Agents',
+							items: [
+
+								{ label: 'Agents', slug: 'guides/ai/agents' },
+							],
+						},
+						{
+							label: 'Web3',
+							items: [
+
+								{ label: 'Web3 General', slug: 'guides/web3' },
+								{ label: 'Solana', slug: 'guides/web3/solana' },
+								{ label: 'EVM', slug: 'guides/web3/evm' },
+							],
+						},
+						{
+							label: 'WebXR',
+							items: [
+
+								{ label: 'WebXR General', slug: 'guides/webxr' },
+								{ label: 'VR', slug: 'guides/webxr/vr' },
+								{ label: 'AR', slug: 'guides/webxr/ar' },
+							],
+						},
 					],
 				},
-				{
-					label: 'Resources',
-					autogenerate: { directory: 'resources' },
-				},
+				// {
+				// 	label: 'Resources',
+				// 	autogenerate: { directory: 'resources' },
+				// },
 			],
 		}),
 	],

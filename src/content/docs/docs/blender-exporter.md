@@ -58,6 +58,6 @@ To use it, go to the scripting tab in blender, click + New, paste it in, and hit
 
 ### Hyperfy Tools
 
-Also check out [Hyperfy Tools - Blender Add-on](/resources/3d/#hyperfy-tools)
+Also check out [Hyperfy Tools - Blender Add-on](/guides/3d/blender/#hyperfy-tools)
 
 ---
