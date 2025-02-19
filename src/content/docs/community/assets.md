@@ -55,6 +55,10 @@ The .hyp has light emissions, sounds, and open action ready to go!
 
 <model-viewer src="/assets/hyperfridge.glb" alt="Hyperfyzz Fridge" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
 
+
+## Hyperfy.how
+
+<model-viewer src="/assets/HyperToken.glb" alt="Hyperfyzz Fridge" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
 ---
 
 
