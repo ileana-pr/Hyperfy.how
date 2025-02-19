@@ -22,8 +22,8 @@ description: $Hyper Token on Solana
 ---
 
 ### Create in-world use cases
-Want to [add use case in world](/resources/web3/#solana) on Solana?
+Want to [add use case in world](/guides/web3/solana) on Solana?
 
 
 ### Marketplaces coming soon!
-Stay tuned for [marketplaces to use Hyper](/resources/hosting/#hyperworldshost)...
+Stay tuned for [marketplaces to use Hyper](/community/projects/hyperworld)...

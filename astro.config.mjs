@@ -31,7 +31,13 @@ export default defineConfig({
 					items: [
 						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
 						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
-						{ label: 'FAQs', slug: 'welcome/faq' },
+					],
+				},
+				{
+					label: 'FAQs',
+					items: [
+						{ label: 'Developer FAQs', slug: 'faq/developer' },
+						{ label: 'Creator FAQs', slug: 'faq/creator' },
 					],
 				},
 				{
@@ -39,19 +45,11 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{ label: 'Open Source Contributors', slug: 'community/contributors' },
+						{ label: 'Hyperfy Branding', slug: 'community/branding' },
 						{ label: 'Community Assets', slug: 'community/assets' },
 						{ label: 'Projects', slug: 'community/projects' },
 						{ label: 'Videos', slug: 'community/videos' },
 
-						{
-							label: 'Brand & Token',
-							collapsed: true,
-							items: [
-								{ label: 'Hyperfy Colors', slug: 'brand/colors' },
-								{ label: '$Hyper Token', slug: 'brand/token' },
-								{ label: 'Hyperball', slug: 'brand/hyperball' },
-							],
-						},
 						{
 							label: 'Socials',
 							collapsed: true,
@@ -171,6 +169,14 @@ export default defineConfig({
 								{ label: 'AR', slug: 'guides/webxr/ar' },
 							],
 						},
+					],
+				},
+
+				{
+					label: 'Token',
+					collapsed: true,
+					items: [
+						{ label: '$Hyper Token', slug: 'token/hyper' },
 					],
 				},
 				// {
