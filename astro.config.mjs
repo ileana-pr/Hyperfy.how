@@ -35,6 +35,7 @@ export default defineConfig({
 				},
 				{
 					label: 'FAQs',
+					collapsed: true,
 					items: [
 						{ label: 'Developer FAQs', slug: 'faq/developer' },
 						{ label: 'Creator FAQs', slug: 'faq/creator' },
@@ -64,7 +65,7 @@ export default defineConfig({
 				{
 					label: 'Setup',
 					items: [
-						{ label: 'Quick Start Installation 👩‍💻🚀 ', slug: 'setup/quickstart' },
+						{ label: 'Quick Start👩‍💻🚀 ', slug: 'setup/quickstart' },
 						{ label: 'Detailed Installation 👶🤝', slug: 'setup/detailed' },
 					],
 				},
@@ -89,6 +90,7 @@ export default defineConfig({
 
 						{
 							label: 'ref',
+							collapsed: true,
 							items: [
 								// Each item here is one entry in the navigation menu.
 								{ label: '-Index', slug: 'ref/folder' },
@@ -113,7 +115,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Guides',
+					label: 'Guides/Resources',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Video Tutorials', slug: 'guides/video-tutorials' },

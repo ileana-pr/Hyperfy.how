@@ -11,6 +11,15 @@ import GithubCard from "astro-github-component";
 
 This installation page is detailed to help those who might be fresh in some of these things.
 
+While this is as detailed as possible, and should get you going.. if you really want to learn Foundations of Web Development, [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations) will teach you a lot - for free!
+
+Once you make it through this `install`, most of what you will do will be directly in your Hyperfy v2 world.  Right now, v2 is still mid-development.  So, if you are here now, keep in mind it's early and things will change.  In the near future, v2 will be much more `No-code` for users to build worlds.
+
+However, one of the amazing and fun aspects of Hyperfy is the many skill-rabbitholes you start running down.  So don't be afraid, drop that `imposter syndrome` and learn some new things.
+
+The community is always here to help.
+
+---
 
 ## Prerequisites
 
@@ -21,9 +30,10 @@ This installation page is detailed to help those who might be fresh in some of t
 - Xcode Command Line Tools on Mac
 - a web browser
 
+---
 
 <Aside title="WSL2 Recommended">
-On Windows?  Install WSL2
+On Windows?  Install WSL2. WSL stands for Windows Subsystem for Linux.
 <Icon name="linux" />
 </Aside>
 
@@ -40,10 +50,14 @@ wsl --install
 
 This command will enable the features necessary to run WSL and install the Ubuntu distribution of Linux.'
 
+The first time you use WSL2, it will ask you to create a `username` and `password` for your new Ubuntu Linux Distribution.
+
+This is a password that only applies to the
 You can now find WSL from the Start menu.  Or in the future, open Command Prompt and type `wsl` and it will switch to WSL2.
 
 if you are working from Command Prompt, after typing `wsl` to be sure to be in the `home` folder of your Ubuntu distribution.  To do this, you can type `cd ~` and hit `Enter`.  `~` is above your `tab` key using `shift`.
 
+For troubleshooting WSL2 install or to learn more about it, go to [WSL2-docs](https://learn.microsoft.com/en-us/windows/wsl/)
 
 ---
 
@@ -101,7 +115,7 @@ If you get stuck with nvm, check their [repo here](https://github.com/nvm-sh/nvm
 ## Cloning the Hyperfy v2 Repo
 
 
-<Aside title="You might need Git.">
+<Aside title="You need Git.">
 
 in WSL2 : `sudo apt install git-all`
 
@@ -113,6 +127,8 @@ enter the command xcode-select --install in the terminal to begin the installati
 
 or check [git site](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you have problems.
 
+To learn more about what `git` is [The Odin Project](https://www.theodinproject.com/lessons/foundations-introduction-to-git) has a great foundational 'course'.
+
 </Aside>
 
 
@@ -123,7 +139,7 @@ or check [git site](https://git-scm.com/book/en/v2/Getting-Started-Installing-Gi
 </Aside>
 
 
-### Main Branch
+### Cloning the Main Branch
 
 Main branch is where current stable updates have been updated to.  `dev` branch is where the newest development is ironed out and eventually gets pushed to `main`.
 
@@ -179,47 +195,20 @@ npm run dev
 
 ---
 
+Your world is now running in http://localhost:3000/. Open in browser.
+
+
+----
 
 Still intimidated?  Go play in the [sandbox](https://play.hyperfy.xyz/).
 
 
 ---
 
-
-## Next Steps
-
-
-### Community Assets
-
-Add a [Hyperduck](/community/assets/#hyperduck) to your world.
-
-Have your own assets?
-
-Learn how to [Optimize Assets](/guides/3d/optimizing/).
-
----
-
-
-### APIs
-
-For all things APIs, head over to [Getting Started](/docs/getting-started).
+Visit [Getting-started](/guides/getting-started) for docs on developing.
 
 
 ---
-
-
-### Hosting
-
-When you're ready to host, choose between [Self-hosting](/hosting/self) or a [Hosting Provider](/hosting/provider).
-
----
-
-### Need help coding?
-
-[AI can be your friend](/guides/coding/ai/), and the community is here to help.
-
----
-
 
 <Aside type="tip" title="Have fun!">
 Hop in the [Discord](https://discord.gg/KbgAua7XXS) if you get stuck or inspired.
