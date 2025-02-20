@@ -5,6 +5,14 @@ description: Collection of community assets for Hyperfy v2.
 
 Assets here are optimized.  Click the name, download raw.  Drag into your world.
 
+Download the .glb, drag 'n drop into your world.  It will create a [.hyp App](/docs/hyp-format) and you should see the model in world.
+
+Have some assets you've made?
+
+Learn how to [Optimize Assets](/guides/3d/optimizing/).
+
+---
+
 ## Hyperduck.
 
 [Hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/hyperduck.glb)

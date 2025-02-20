@@ -62,9 +62,10 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Quick Start 🚀',
+					label: 'Setup',
 					items: [
-						{ label: 'Installation', slug: 'quickstart/installation' },
+						{ label: 'Quick Start Installation 👩‍💻🚀 ', slug: 'setup/quickstart' },
+						{ label: 'Detailed Installation 👶🤝', slug: 'setup/detailed' },
 					],
 				},
 				{

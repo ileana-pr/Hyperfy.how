@@ -3,7 +3,15 @@ title: Developer FAQs
 description: Frequently Asked Questions for Developers in Hyperfy v2.
 ---
 
-### When I drag and drop a model into a world nothing happens?
+## Is Hyperfy free?
+
+Yes it's free open source.  Once you are ready to share your v2 world with others that can join, the world will need to be [hosted](/hosting/self).  This is the only cost associated, but you can find many ways to do this.  Some even free.
+
+
+---
+
+
+## When I drag and drop a model into a world nothing happens?
 
 One of the following issues is likely occuring:
 
@@ -18,9 +26,11 @@ cp .env.example .env
 
 3. There is currently an error involving some models with draco textures. Please try with the model included in this repo at: [hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/hyperduck.glb)
 
+
 ---
 
-### I need a random number.  Math.random() has security issues.  What should I do?
+
+## I need a random number.  Math.random() has security issues.  What should I do?
 
 Use our [global `num` method](/docs/num-method) created just for that.
 
