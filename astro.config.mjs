@@ -95,8 +95,10 @@ export default defineConfig({
 								// Each item here is one entry in the navigation menu.
 								{ label: '-Index', slug: 'ref/folder' },
 								{ label: 'Action', slug: 'ref/action' },
+								{ label: 'Anchor', slug: 'ref/anchor' },
 								{ label: 'App', slug: 'ref/app' },
 								{ label: 'Audio', slug: 'ref/audio' },
+								{ label: 'Avatar', slug: 'ref/avatar' },
 								{ label: 'Collider', slug: 'ref/collider' },
 								{ label: 'Group', slug: 'ref/group' },
 								{ label: 'LOD', slug: 'ref/lod' },
@@ -104,6 +106,7 @@ export default defineConfig({
 								{ label: 'Mesh', slug: 'ref/mesh' },
 								{ label: 'Node', slug: 'ref/node' },
 								{ label: 'Num', slug: 'ref/num' },
+								{ label: 'Player', slug: 'ref/player' },
 								{ label: 'Props', slug: 'ref/props' },
 								{ label: 'RigidBody', slug: 'ref/rigid-body' },
 								{ label: 'UI', slug: 'ref/ui' },
