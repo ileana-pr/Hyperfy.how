@@ -1,4 +1,4 @@
-*You can click 'Edit Page' on the bottom of any page to go directly to it in repo*
+*You can click 'Edit Page' on the bottom of any page to go directly to it in repo and prompt you to fork*
 
 Hyperfy.how is a living community resource for [Hyperfy v2.](https://github.com/hyperfy-xyz/hyperfy)
 
@@ -10,6 +10,17 @@ Easily add resources in markdown to the appropriate .md or .mdx file.  If needed
 For sidebar and routing, you will need to add to astro.config.mjs. Order is based on astro.config.mjs.  Easiest is to copy from above and edit.  You can have nested sidebars.  You can have an index.md/mdx in a nested folder.
 
 For example, `guides/web3` will direct to `guides/web3/index`.  You don't need to say index, and it will url to guides/web3.
+
+---
+
+For images, recommend to convert to .webp [Image Magick is one great way](https://imagemagick.org/)  or [Photopea is another](https://www.photopea.com/).  Both free and open-source tools.
+
+Drop images in `public/assets`
+
+`[![name](/assets/photo.webp)](/assets/photo.webp)` in .md/.mdx file will display image and allow it to be clicked to enlarge.
+
+
+For embeds, badges, asides - check the `/src/templates/example.mdx`
 
 ---
 
@@ -32,6 +43,9 @@ http://localhost:4321/
 
 
 ---
+
+All PR merges will auto-build via netlify and deploy live.
+
 ---
 
 ### Starlight on Astro
