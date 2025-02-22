@@ -1,9 +1,9 @@
 ---
-title: Hyperfy Branding
-description: Hyperfy Brand Guides
+title: Hyperfy Colors
+description: Hyperfy Colors Hex/RGB/HSL
 ---
 
-### Hyperfy Brand Colors
+### Hyperfy Colors
 [![Hyperfy Brand Colors](/assets/brandColors.webp)](/assets/brandColors.webp)
 
 ### Hyperfy Hex

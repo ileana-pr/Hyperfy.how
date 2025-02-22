@@ -46,20 +46,14 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{ label: 'Open Source Contributors', slug: 'community/contributors' },
-						{ label: 'Hyperfy Branding', slug: 'community/branding' },
+						{ label: 'Builders Calls', slug: 'community/calls' },
+						{ label: 'Video Tutorials Series', slug: 'community/tutorials' },
+						{ label: 'Hyperfy Colors', slug: 'community/branding' },
 						{ label: 'Community Assets', slug: 'community/assets' },
-						{ label: 'Projects', slug: 'community/projects' },
+						{ label: 'Community Projects', slug: 'community/projects' },
+						{ label: 'Tweets', slug: 'community/x' },
+						{ label: 'Bluesky', slug: 'community/bluesky' },
 						{ label: 'Videos', slug: 'community/videos' },
-
-						{
-							label: 'Socials',
-							collapsed: true,
-							items: [
-								{ label: 'Tweets', slug: 'socials/x' },
-								{ label: 'Youtube', slug: 'socials/youtube' },
-								{ label: 'Bluesky', slug: 'socials/bluesky' },
-							],
-						},
 					],
 				},
 				{
@@ -67,14 +61,15 @@ export default defineConfig({
 					items: [
 						{ label: 'Quick Start👩‍💻🚀 ', slug: 'setup/quickstart' },
 						{ label: 'Detailed Installation 👶🤝', slug: 'setup/detailed' },
-					],
-				},
-				{
-					label: 'v2 Hosting',
-					collapsed: true,
-					items: [
-						{ label: 'Self Hosting', slug: 'hosting/self' },
-						{ label: 'Hosting Providers', slug: 'hosting/providers' },
+
+						{
+							label: 'v2 Hosting',
+							collapsed: true,
+							items: [
+								{ label: 'Self Hosting', slug: 'hosting/self' },
+								{ label: 'Hosting Providers', slug: 'hosting/providers' },
+							],
+						},
 					],
 				},
 				{
@@ -121,9 +116,6 @@ export default defineConfig({
 					label: 'Guides/Resources',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Video Tutorials', slug: 'guides/video-tutorials' },
-						{ label: 'Community HackMDs', slug: 'guides/hackmd' },
-						{ label: 'Various Articles', slug: 'guides/articles' },
 
 						{
 							label: 'Coding',
@@ -175,6 +167,9 @@ export default defineConfig({
 								{ label: 'AR', slug: 'guides/webxr/ar' },
 							],
 						},
+
+						{ label: 'Community HackMDs', slug: 'guides/hackmd' },
+						{ label: 'Various Articles', slug: 'guides/articles' },
 					],
 				},
 
