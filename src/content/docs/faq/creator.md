@@ -30,7 +30,7 @@ v2 is open-source and hosted by you or a chosen provider.  The only cost is the 
 Check out the [detailed-installation] to get you setup with everything you need.
 Hyperfy v2 is currently in development, but aims to make it as no-code as possible for future users.  If you want to start now, there is much support and you can learn some new skills along the way.  Once your world is setup locally, you can do alot right drag and drop.
 
-We are currently making a [Video-Series](/guides/video-tutorials) starting from the basics.
+We are currently making a [Video-Series](/community/tutorials) starting from the basics.
 
 ---
 

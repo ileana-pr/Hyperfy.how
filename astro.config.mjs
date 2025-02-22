@@ -54,6 +54,7 @@ export default defineConfig({
 						{ label: 'Tweets', slug: 'community/x' },
 						{ label: 'Bluesky', slug: 'community/bluesky' },
 						{ label: 'Videos', slug: 'community/videos' },
+
 					],
 				},
 				{
@@ -88,7 +89,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								// Each item here is one entry in the navigation menu.
-								{ label: '-Index', slug: 'ref/folder' },
+								{ label: '-Index', slug: 'ref/tree' },
 								{ label: 'Action', slug: 'ref/action' },
 								{ label: 'Anchor', slug: 'ref/anchor' },
 								{ label: 'App', slug: 'ref/app' },

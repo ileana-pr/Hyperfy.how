@@ -50,6 +50,6 @@ cp .env.example .env
 
 ## I need a random number.  Math.random() has security issues.  What should I do?
 
-Use our [global `num` method](/docs/num-method) created just for that.
+Use our [global `num` method](/ref/num) created just for that.
 
 ---
