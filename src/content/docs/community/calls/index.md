@@ -3,21 +3,12 @@ title: Builder Community Calls
 description: Weekly Builder Community Calls of Hyperfy v2.
 ---
 
-import { YouTube } from 'astro-embed';
+- [21Feb](/community/calls/21feb)
 
+- [13Feb](/community/calls/13feb)
 
-### Builder Community Call - 21 Feb 2025
-<YouTube id="5JbPh_kCGso" />
+- [6Feb](/community/calls/6feb)
 
----
-
-### Builder Community Call - 13 Feb 2025
-<YouTube id="dyG-fRH79sU" />
-
----
-
-### Builder Community Call - 6 Feb 2025
-<YouTube id="NwHpUX59UA8" />
 
 ---
 

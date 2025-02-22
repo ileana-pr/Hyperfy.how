@@ -46,14 +46,36 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{ label: 'Open Source Contributors', slug: 'community/contributors' },
-						{ label: 'Builders Calls', slug: 'community/calls' },
 						{ label: 'Video Tutorials Series', slug: 'community/tutorials' },
-						{ label: 'Hyperfy Colors', slug: 'community/branding' },
 						{ label: 'Community Assets', slug: 'community/assets' },
 						{ label: 'Community Projects', slug: 'community/projects' },
-						{ label: 'Tweets', slug: 'community/x' },
-						{ label: 'Bluesky', slug: 'community/bluesky' },
-						{ label: 'Videos', slug: 'community/videos' },
+						{ label: 'Hyperfy Colors', slug: 'community/branding' },
+
+						{
+							label: 'Builders Calls',
+							collapsed: true,
+							items: [
+								{ label: 'All Calls', slug: 'community/calls' },
+								{ label: '21 Feb 2025', slug: 'community/calls/21feb' },
+								{ label: '13 Feb 2025', slug: 'community/calls/13feb' },
+								{ label: '6 Feb 2025', slug: 'community/calls/6feb' },
+
+							],
+						},
+
+						{
+							label: 'Socials',
+							collapsed: true,
+							items: [
+								{ label: 'Tweets', slug: 'socials/x' },
+								{ label: 'Bluesky', slug: 'socials/bluesky' },
+								{ label: 'Videos', slug: 'socials/videos' },
+
+							],
+						},
+
+
+
 
 					],
 				},
@@ -89,7 +111,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								// Each item here is one entry in the navigation menu.
-								{ label: '-Index', slug: 'ref/tree' },
+								{ label: '-Index', slug: 'ref' },
 								{ label: 'Action', slug: 'ref/action' },
 								{ label: 'Anchor', slug: 'ref/anchor' },
 								{ label: 'App', slug: 'ref/app' },
