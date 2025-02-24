@@ -34,14 +34,6 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'FAQs',
-					collapsed: true,
-					items: [
-						{ label: 'Developer FAQs', slug: 'faq/developer' },
-						{ label: 'Creator FAQs', slug: 'faq/creator' },
-					],
-				},
-				{
 					label: 'Community',
 					collapsed: true,
 					items: [
@@ -93,6 +85,14 @@ export default defineConfig({
 								{ label: 'Hosting Providers', slug: 'hosting/providers' },
 							],
 						},
+					],
+				},
+				{
+					label: 'FAQs',
+					collapsed: true,
+					items: [
+						{ label: 'Developer FAQs', slug: 'faq/developer' },
+						{ label: 'Creator FAQs', slug: 'faq/creator' },
 					],
 				},
 				{
