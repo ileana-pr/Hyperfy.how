@@ -3,7 +3,6 @@ title: Avatar
 description: Renders a VRM avatar
 ---
 
-
 Renders a VRM avatar
 
 ```jsx

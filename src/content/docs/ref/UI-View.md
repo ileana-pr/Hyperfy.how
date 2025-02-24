@@ -5,6 +5,7 @@ description: Represents a single view inside a UI, similar to a `div`.
 
 Represents a single view inside a UI, similar to a `div`.
 
+
 ```jsx
 const view = app.create('uiview')
 view.backgroundColor = 'rgba(0, 0, 0, 0.5)'
@@ -30,6 +31,14 @@ The height of the view in pixels. Defaults to `100`.
 The background color of the view.
 Can be hex (eg `#000000`) or rgba (eg `rgba(0, 0, 0, 0.5)`).
 Defaults to `null`.
+
+### `.borderWidth`: Number
+
+The width of the border in pixels.
+
+### `.borderColor`: String
+
+The color of the border.
 
 ### `.borderRadius`: Number
 
@@ -88,4 +97,4 @@ Defaults to `0`.
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node) properties
+Inherits all [Node](/ref/node) properties

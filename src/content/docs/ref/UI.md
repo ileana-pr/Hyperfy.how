@@ -5,6 +5,7 @@ description: Displays a UI plane in-world
 
 Displays a UI plane in-world
 
+
 ```jsx
 const ui = app.create('ui')
 ui.backgroundColor = 'rgba(0, 0, 0, 0.5)'
@@ -51,6 +52,14 @@ The background color of the UI.
 Can be hex (eg `#000000`) or rgba (eg `rgba(0, 0, 0, 0.5)`).
 Defaults to `null`.
 
+### `.borderWidth`: Number
+
+The width of the border in pixels.
+
+### `.borderColor`: String
+
+The color of the border.
+
 ### `.borderRadius`: Number
 
 The radius of the border in pixels.
@@ -91,4 +100,4 @@ Defaults to `0`.
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node) properties
+Inherits all [Node](/ref/node) properties
