@@ -24,3 +24,4 @@ For more information about effects, see [Player.setEffect](/ref/player).
 ### `.{...Node}`
 
 Inherits all [Node](/ref/node) properties
+
