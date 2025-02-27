@@ -658,7 +658,8 @@ An open-source & self-hostable Heroku / Netlify / Vercel alternative.
    - TTL: 60 (or lowest)
 
 #### Example DNS Configuration:
-```
+
+```sh frame="none"
 Type    Name    Value           TTL
 A       @       203.0.113.1     60 (or lowest)
 A       *       203.0.113.1     60 (or lowest)
@@ -677,7 +678,7 @@ This configuration ensures that:
    ```
    *Reference: [Official Coolify Documentation](https://coolify.io/docs/installation)*
 
-2. Connect to the Coolify interface via https://<YOUR_SERVER_IP>:8000 and create your admin user
+2. Connect to the Coolify interface via https://[YOUR_SERVER_IP]:8000 and create your admin user
 
 3. (OPTIONAL)Configure your host SSH port to match your host if needed, and add the following to Coolify's Caddy Dynamic proxy:
      *MAKE SURE THIS IS CORRECT BEFORE SAVING!!! EDITING THIS AFTER IS NOT EASY*
@@ -706,7 +707,7 @@ This configuration ensures that:
    # tags: ThreeJS,NODE,Hyperfy,Metaverse,Self-Hosted
    # logo: svgs/hyperfy.svg
    # port: 3000
-   
+
    services:
      hyperfy:
        image: howieduhzit/hyperfy:latest
