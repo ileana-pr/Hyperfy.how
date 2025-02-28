@@ -3,14 +3,21 @@ title: Self-Hosting
 description: Self-hosting Hyperfy v2 worlds.
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 import { LinkPreview } from 'astro-embed';
 import { Badge } from '@astrojs/starlight/components';
 
 
-'Self-hosting' means that you are in control of the server and need to get it started yourself.  For a more hands-off approach, and to have it hosted by others for a cost, check out [Hosting Providers](/hosting/providers/).
+'Self-hosting' means that you are in control of the server and need to get it started yourself.
 
+For a more hands-off approach, and to have it hosted by others for a cost, check out:
 
-We will have more video guides soon.  These are some of the ways to do it.
+<LinkCard title="Hosting Providers" href="/hosting/providers/" />
+
+<LinkCard title="Video Tutorial - Ep2" href="/community/tutorials/#episode-2" />
+
+<LinkCard title="Install Hyperfy v2 via Quick Start 🚀" href="/setup/quickstart" />
+
 
 ---
 
@@ -31,7 +38,6 @@ We will have more video guides soon.  These are some of the ways to do it.
 
 ## Fly.io
 
-[Install Hyperfy v2 via Quick Start](/setup/quickstart)
 
 Add this as `fly.toml` in the root folder of your project (`my-world`)
 change '[yourappname]' to your project name (`my-world`) and Save.
@@ -75,15 +81,18 @@ primary_region = 'ams'
   cpus = 1
 ```
 
-### [Follow Fly.io Quick start](https://fly.io/docs/getting-started/launch/)
+### Follow Fly.io Quick start
 
-This will help you make an account on [Fly.io](https://fly.io/) and install the Fly CLI so `fly` commands will work.
+<LinkCard title="Install the Fly.io CLI" href="https://fly.io/docs/getting-started/launch/" />
+
+This will help you make an account on [Fly.io](https://fly.io/) and install the Fly CLI, so `fly` commands will work.
 
 In the terminal `cd my-world` and run `fly launch`
 
 It most likely will auto-run `fly deploy` as well.  If prompted after `fly launch`, run `fly deploy`.
 
 Your world will deploy to https://[yourappname].fly.dev.
+<Badge text="Success" variant="success" />
 
 The next time you want to update deployment, run `fly deploy`.
 
@@ -92,9 +101,11 @@ To add custom domain follow their [docs](https://fly.io/docs/networking/custom-d
 
 
 ---
+---
+
 
 ## Coolify Installation Guide:
-**From Zero to Hyper Cool - [guide by Howie Duhzit]((https://github.com/howieduhzit))**
+**From Zero to Hyper Cool - [guide by Howie Duhzit](https://github.com/howieduhzit)**
 
 <Badge text="Free" variant="caution" />
 
