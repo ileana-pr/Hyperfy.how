@@ -4,7 +4,7 @@ description: Hyperfy.how Video Tutorial Series for Hyperfy v2.
 ---
 
 import { Aside } from '@astrojs/starlight/components';
-import { LinkCard } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 import { YouTube } from 'astro-embed';
 
 
@@ -46,14 +46,15 @@ Workshops in [Discord](https://discord.gg/SzPjsvk5).  Moving to Mondays.
 
 ---
 
-<LinkCard title="Or Join the Github discussion" href="https://github.com/Innkeeping/hyperfy.how/discussions/1" />
-
 Or reach out to `@fractilians` in Discord in #docs. 🦾
 
 
 Discord events are recorded, posted to Hyperfy YouTube, and embedded below.
 
+<CardGrid>
+<LinkCard title="Join the Github discussion" href="https://github.com/Innkeeping/hyperfy.how/discussions/1" />
 <LinkCard title="Subscribe to the Hyperfy YouTube 👍" href="https://www.youtube.com/@hyperfy_xyz" />
+</CardGrid>
 
 ---
 
@@ -77,13 +78,10 @@ Short clips coming soon.
 
 <YouTube id="_B15JvUU0t4" />
 
-
+<CardGrid>
 <LinkCard title="Fly.io - Self-hosting" href="/hosting/self/#flyio" />
-
 <LinkCard title="Coolify" href="/hosting/self/#coolify-installation-guide" />
-
 <LinkCard title="Hosting Provided by Hyperfyworlds.host" href="/hosting/providers/#hyperworldshost" />
-
-
+</CardGrid>
 
 ---

@@ -2,7 +2,14 @@
 title: Community Projects
 description: Some cool projects building on Hyperfy v2.
 ---
+
+<script async src="https://platform.twitter.com/widgets.js"></script>
+
+import { Tweet } from 'astro-embed';
 import { Badge } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkPreview } from 'astro-embed';
+import { YouTube } from 'astro-embed';
 
 The following are some cool projects building on Hyperfy v2:
 
@@ -14,22 +21,39 @@ Hyperball is a fast-paced, team-based game where players smash a ball around an 
 
 [![Hyperball](/assets/hyperball.webp)](/assets/hyperball.webp)
 
-### Play
+### Play <Badge text="Beta" variant="tip" />
 
-[Play Hyperball](https://agents.hyperfy.xyz/)
-* Status: <Badge text="Beta" variant="tip" />
+<LinkCard title="🎮 Play Hyperball" href="https://agents.hyperfy.xyz/" />
 
-### Video
-[Video on X](/socials/x/#hyperfy)
+
+
+### Video preview
+<Tweet theme="dark" id="https://x.com/hyperfy_io/status/1883940479827599873
+" />
 
 ---
+---
+---
 
-### [Hyperworld App Marketplace](https://hyperworld.host/marketplace)
+## Dr. Doge's WestFalloutWorld Experiment
 
+<LinkCard title="Visit one of the most developed v2 worlds." href="https://tattedalien.club/" />
+
+
+---
+---
+---
+
+## Hyperworld App Marketplace
+
+<LinkCard title="Tip creators with $Hyper on Hyperworld App Marketplace" href="https://hyperworld.host/marketplace" />
 
 Drag 'n drop a ready-made [.hyp app](/docs/hyp-format/) into your world.
 
+<LinkPreview id="https://hyperworlds.host/marketplace" />
 
+---
+---
 ---
 
 
@@ -43,15 +67,19 @@ Add-on by [HowieDuhzit](/socials/x/#howieduhzit)
   + Physics
   + Colliders
 
+<LinkCard title="Get Hyperfy Tools" href="https://extensions.blender.org/addons/hyperfy-tools/" />
 
-* [Get Hyperfy Tools](https://extensions.blender.org/addons/hyperfy-tools/)
 
 **Drop a 🌟5-star🌟 review when you love it.  Get Hyperfy Tools to front page of add-ons!**
 
 
 Also from HowieDuhzit:
 
-[Hyperfy theme for blender](https://github.com/HowieDuhzit/Hyperfy-Tools/blob/main/Hyperfy.xml) and also default startup file for blender that includes the default terrain and hdr from hyperfy for the closest look to in world previewing
+### Hyperfy theme for blender
+
+also default startup file for blender that includes the default terrain and hdr from hyperfy for the closest look to in world previewing
+
+<LinkCard title="Hyperfy theme for blender" href="https://github.com/HowieDuhzit/Hyperfy-Tools/blob/main/Hyperfy.xml" />
 
 [![Hyperfy Blender Theme](/assets/hyperfy-blender-theme.webp)](/assets/hyperfy-blender-theme.webp)
 
@@ -71,13 +99,16 @@ Also from HowieDuhzit:
 
 
 ---
-
+---
+---
 
 [![Zesty](/assets/zesty.webp)](/assets/zesty.webp)
 
 
 ## Beacon by Zesty
-[Spatial Beacon](https://github.com/zestyxyz/beacon)
+
+<LinkCard title="Spatial Beacon on Zesty GitHub" href="https://github.com/zestyxyz/beacon" />
+
 
 ### Distributed Spatial Internet Graph Beacon
 Adding the beacon will get your spatial web app discovered across a distributed network of spatial internet graphs.
@@ -87,7 +118,9 @@ As of today, the beacon simply sends some basic metadata about the embedding app
 
 
 ### Relay
-[relay.zesty.xyz](https://relay.zesty.xyz/)
+
+<LinkCard title="relay.zesty.xyz" href="https://relay.zesty.xyz/" />
+
 
 'This is a deployment of a Spatial Internet Graph Relay, which helps to catalogue spatial experiences on the web, currently maintained by [Zesty](https://www.zesty.xyz/).'
 
@@ -95,10 +128,30 @@ As of today, the beacon simply sends some basic metadata about the embedding app
 
 ### Drag 'n drop Beacon into your Hyperfy v2 world
 
-[Beacon on Hyperworld.host App Marketplace](https://hyperworld.host/marketplace)
+<LinkCard title="Get your Beacon on Hyperworld.host App Marketplace" href="https://hyperworld.host/marketplace" />
 
-[Hyperworld](/hosting/providers) also offers Hosting.
 
+<LinkCard title="Hyperworld also offers Hosting." href="/hosting/providers" />
+
+
+---
+---
+---
+
+## Bossu
+
+<CardGrid>
+<LinkCard title="Bossu on X" href="https://x.com/bossu_online" />
+<LinkCard title="Bossu website" href="https://bossu.online/" />
+<LinkCard title="Bossu on Magic Eden" href="https://magiceden.io/marketplace/bossu_" />
+</CardGrid>
+
+
+Battle Royales coming soon in Hyperfy as seen on M3's Clank Tank:
+<YouTube id="R-oObQtsksw" />
+
+---
+---
 ---
 
 ## **Numinia**
@@ -109,18 +162,25 @@ Numinia is a virtual and decentralized city that serves as both a narrative and 
 [![Numen Games](/assets/Numen_Games_Logo.webp)](/assets/Numen_Games_Logo.webp)
 
 
-* **[Website](https://numen.games/)**: Numen Games official website
-* **[Github](https://github.com/numengames)**: Numen Games Github repository
-* **[Discord](https://discord.gg/ASwwdd24pp)**: Join Numen Games' community on Discord
-* **[Manifesto](https://numen.games/manifesto)**: Read manifesto and learn more about their vision
+<CardGrid>
+<LinkCard title="Numen Games official website" href="https://numen.games/" />
+<LinkCard title="Numen Games Github repository" href="https://github.com/numengames" />
+<LinkCard title="Join Numen Games' community on Discord" href="https://discord.gg/ASwwdd24pp" />
+<LinkCard title="Read manifesto and learn more about their vision" href="https://numen.games/manifesto" />
+</CardGrid>
+
+
 
 ---
+---
+---
+
 
 ## Hyperfyzz Energy
 
 Metaverse powerup drink buff brand in the making.
 
-A community-made experiment in [agent](/guides/ai/agents/) rovers, [nfts](/guides/web3/), cross-world powerups, and [$Hyper](/brand/token/) use case.
+A community-made experiment in [agent](/guides/ai/agents/) rovers, [nfts](/guides/web3/), cross-world powerups, and [$Hyper](/token/hyper/) use case.
 
 
 [<img src="/assets/hyperfyzzz.webp" width="250"/>](/assets/hyperfyzzz.webp)
@@ -129,10 +189,11 @@ A community-made experiment in [agent](/guides/ai/agents/) rovers, [nfts](/guide
 [<img src="/assets/hyperfyzz-truck.webp" width="250"/>](/assets/hyperfyzz-truck.webp)
 
 
-[Hyperfyzz truck Asset & .hyp](/community/assets/#hypertruck)
+<CardGrid>
+<LinkCard title="Hyperfyzz truck Asset & .hyp" href="/community/assets/#hypertruck" />
+<LinkCard title="Hyperfridge Asset & .hyp" href="/community/assets/#hyperfridge" />
+</CardGrid>
 
-
-[Hyperfridge Asset & .hyp](/community/assets/#hyperfridge)
 
 ---
-
+---
