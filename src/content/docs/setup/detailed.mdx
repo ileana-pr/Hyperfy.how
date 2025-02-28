@@ -4,6 +4,7 @@ description: Detailed install for to get building in Hyperfy v2.
 ---
 import { Icon } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 import { Badge } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import GithubCard from "astro-github-component";
@@ -11,6 +12,17 @@ import GithubCard from "astro-github-component";
 This will setup a world locally on your machine that you can then [self-host](/hosting/self).
 
 You can start a hosted world from a [hosting provider](/hosting/provider) without needing to setup locally, if you prefer.
+
+---
+
+<Card title="Hyperfy v2 Repo" icon="star">
+
+<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
+
+🌟Star the repo🌟
+
+[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
+</Card>
 
 ---
 
@@ -159,7 +171,33 @@ npm install
 npm run dev
 
 ```
+Each separated below for easy copying.
 
+```sh frame="none"
+
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+
+```
+```sh frame="none"
+
+cd my-world
+
+```
+```sh frame="none"
+
+cp .env.example .env
+
+```
+```sh frame="none"
+
+npm install
+
+```
+```sh frame="none"
+
+npm run dev
+
+```
 After above, your world is now running in http://localhost:3000/. Open in browser.
 
 <Badge text="Success" variant="success" />
@@ -169,14 +207,6 @@ When your world is not running (you kill the terminal) you can change the `my-wo
 Just remember next time, you will `cd 'new world name'` then `npm run dev`
 
 ---
-
-
-<Card title="Hyperfy v2 Repo" icon="star">
-
-<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
-
-[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
-</Card>
 
 ---
 
@@ -198,20 +228,65 @@ git checkout -t origin/dev
 git pull
 npm run dev
 ```
+Each separated below for easy copying.
+
+```sh frame="none"
+cd my-world
+
+```
+
+```sh frame="none"
+
+git fetch origin
+
+```
+
+```sh frame="none"
+
+git checkout -t origin/dev
+
+```
+
+```sh frame="none"
+
+git pull
+
+```
+
+```sh frame="none"
+
+npm run dev
+
+```
+
 
 ---
 
+<Badge text="Success" variant="success" />
 Your world is now running in http://localhost:3000/. Open in browser.
 
 
 ----
 
-Still intimidated?  Go play in the [sandbox](https://play.hyperfy.xyz/).
+## Start building
+
+### Hosting
+
+When you're ready to host, choose between:
+
+<LinkCard title="Self-hosting" href="/hosting/self" />
+<LinkCard title="Hosting Provider" href="/hosting/provider" />
+
+---
+
+<LinkCard title="Still intimidated?  Go play in the sandbox. 🎮  " href="https://play.hyperfy.xyz/" />
+
 
 
 ---
 
-Visit [Getting-started](/guides/getting-started) for docs on developing.
+<LinkCard title="Visit Getting-started for docs on developing. 📖" href="/docs/getting-started" />
+
 
 
 ---
@@ -232,3 +307,7 @@ Share what you're cooking on [X](https://x.com/hyperfy_io) and tag @hyperfy_io
 If you run into please feel free to join Hyperfy [Discord](https://discord.gg/KbgAua7XXS) to ask for help.  The community is knowledgeable and very supportive.
 
 ---
+
+### Need help coding?
+
+<LinkCard title="AI can be your friend, and the community is here to help." href="/guides/coding/ai/" />

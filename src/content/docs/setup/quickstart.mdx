@@ -4,6 +4,7 @@ description: Quick start to get building in Hyperfy v2.
 ---
 import { Icon } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import { Badge } from '@astrojs/starlight/components';
 import GithubCard from "astro-github-component";
@@ -12,6 +13,19 @@ import GithubCard from "astro-github-component";
 This will setup a world locally on your machine that you can then [self-host](/hosting/self).
 
 You can start a [hosted world](/hosting/providers) from a hosting provider without needing to setup locally, if you prefer.
+
+---
+
+<Card title="Hyperfy v2 Repo" icon="star">
+
+<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
+
+🌟Star the Repo🌟
+
+[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
+</Card>
+
+---
 
 ## Prerequisites
 
@@ -24,16 +38,19 @@ You can start a [hosted world](/hosting/providers) from a hosting provider witho
 </Aside>
 
 
-### Node
+### Node 22.11.0
 
-**Node 22.11.0+ (eg via [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))**
+(eg via [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
 
 ```sh frame="none"
 nvm install 22.11.0
+
+```
+```sh frame="none"
+
 nvm use 22.11.0
 
 ```
-
 ---
 
 ## Install
@@ -49,6 +66,33 @@ npm install
 npm run dev
 
 ```
+Each separated below for easy copying.
+
+```sh frame="none"
+
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+
+```
+```sh frame="none"
+
+cd my-world
+
+```
+```sh frame="none"
+
+cp .env.example .env
+
+```
+```sh frame="none"
+
+npm install
+
+```
+```sh frame="none"
+
+npm run dev
+
+```
 
 After above, your world is now running in http://localhost:3000/. Open in browser.
 
@@ -59,14 +103,6 @@ When your world is not running (you kill the terminal) you can change the `my-wo
 Just remember next time, you will `cd 'new world name'` then `npm run dev`
 
 ---
-
-
-<Card title="Hyperfy v2 Repo" icon="star">
-
-<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
-
-[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
-</Card>
 
 ---
 
@@ -87,6 +123,36 @@ git fetch origin
 git checkout -t origin/dev
 git pull
 ```
+Each separated below for easy copying.
+
+```sh frame="none"
+cd my-world
+
+```
+
+```sh frame="none"
+
+git fetch origin
+
+```
+
+```sh frame="none"
+
+git checkout -t origin/dev
+
+```
+
+```sh frame="none"
+
+git pull
+
+```
+
+```sh frame="none"
+
+npm run dev
+
+```
 
 ---
 
@@ -100,23 +166,29 @@ git pull
 
 ---
 
+## Start building
+
 ### APIs
 
-For all things APIs, head over to [Getting Started](/docs/getting-started).
-
+<LinkCard title="For all things APIs, head over to Getting Started 📖" href="/docs/getting-started" />
 
 ---
 
 
 ### Hosting
 
-When you're ready to host, choose between [Self-hosting](/hosting/self) or a [Hosting Provider](/hosting/provider).
+When you're ready to host, choose between:
+
+<LinkCard title="Self-hosting" href="/hosting/self" />
+<LinkCard title="Hosting Provider" href="/hosting/provider" />
+
 
 ---
 
 ### Need help coding?
 
-[AI can be your friend](/guides/coding/ai/), and the community is here to help.
+<LinkCard title="AI can be your friend, and the community is here to help." href="/guides/coding/ai/" />
+
 
 ---
 
@@ -128,7 +200,7 @@ Share what you're cooking on [X](https://x.com/hyperfy_io) and tag @hyperfy_io
 
 ---
 
-Hop in the [sandbox](https://play.hyperfy.xyz/) to see where current `dev` branch is.
+<LinkCard title=" 🎮  Play in the v2 sandbox to see where current `dev` branch is." href="https://play.hyperfy.xyz/" />
 
 ---
 
