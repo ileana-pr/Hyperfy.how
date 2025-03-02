@@ -13,7 +13,7 @@ Learn how to [Optimize Assets](/guides/3d/optimizing/).
 
 ---
 
-## Hyperduck.
+## Hyperduck. by Bogie
 
 [Hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/hyperduck.glb)
 
@@ -35,7 +35,7 @@ Learn how to [Optimize Assets](/guides/3d/optimizing/).
 
 ---
 
-## Hyperfy Logo Graded
+## Hyperfy Logo Graded by HowieDuhzit
 
 [HyperfyLogoGrad.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/HyperfyLogoGrad.glb)
 
@@ -43,7 +43,7 @@ Learn how to [Optimize Assets](/guides/3d/optimizing/).
 
 ---
 
-## Hyperfyzz Truck
+## Hyperfyzz Truck by Scoe
 
 [Download the .hyp and drag into your world.](https://github.com/Innkeeping/Hyperfy.how/blob/main/src/assets/hyps/Hyperfyzz-truck.hyp)
 
@@ -53,7 +53,7 @@ Learn how to [Optimize Assets](/guides/3d/optimizing/).
 
 ---
 
-## Hyperfyzz Fridge
+## Hyperfyzz Fridge by Bogie
 
 [Download the .hyp and drag into your world.](https://github.com/Innkeeping/Hyperfy.how/blob/main/src/assets/hyps/HyperFridge1.hyp)
 
@@ -64,7 +64,7 @@ The .hyp has light emissions, sounds, and open action ready to go!
 <model-viewer src="/assets/hyperfridge.glb" alt="Hyperfyzz Fridge" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
 
 
-## Hyperfy.how
+## Hyperfy.how by HowieDuhzit/Omka
 
 <model-viewer src="/assets/HyperToken.glb" alt="Hyperfyzz Fridge" camera-controls auto-rotate width="1600" height="1200"></model-viewer>
 ---
