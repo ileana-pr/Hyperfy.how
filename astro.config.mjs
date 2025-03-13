@@ -48,6 +48,8 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'All Calls', slug: 'community/calls' },
+								{ label: '12 March 2025', slug: 'community/calls/12mar' },
+								{ label: '5 March 2025', slug: 'community/calls/5mar' },
 								{ label: '21 Feb 2025', slug: 'community/calls/21feb' },
 								{ label: '13 Feb 2025', slug: 'community/calls/13feb' },
 								{ label: '6 Feb 2025', slug: 'community/calls/6feb' },
