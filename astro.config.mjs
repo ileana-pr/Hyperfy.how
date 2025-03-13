@@ -149,6 +149,21 @@ export default defineConfig({
 
 								{ label: 'Coding Resources', slug: 'guides/coding' },
 								{ label: 'Coding with AI', slug: 'guides/coding/ai' },
+								{ label: 'AI Super Prompts', slug: 'guides/coding/ai-prompts' },
+							],
+						},
+
+						{
+							label: 'Avatars',
+							collapsed: true,
+							items: [
+
+								{ label: 'Emotes', slug: 'guides/avatars/emotes' },
+								{ label: 'VRM Creators', slug: 'guides/avatars/creators' },
+								{ label: 'Guides and Tools', slug: 'guides/avatars/guides' },
+								{ label: 'Open Source Avatars', slug: 'guides/avatars/opensource' },
+								{ label: 'Marketplaces', slug: 'guides/avatars/marketplaces' },
+
 							],
 						},
 
@@ -158,7 +173,6 @@ export default defineConfig({
 							items: [
 
 								{ label: 'Optimizing Assets', slug: 'guides/3d/optimizing' },
-								{ label: 'Avatars', slug: 'guides/3d/avatars' },
 								{ label: 'Models', slug: 'guides/3d/models' },
 								{ label: 'Blender', slug: 'guides/3d/blender' },
 								{ label: 'Other tools', slug: 'guides/3d/tools' },
