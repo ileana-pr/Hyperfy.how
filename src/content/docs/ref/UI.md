@@ -5,7 +5,6 @@ description: Displays a UI plane in-world
 
 Displays a UI plane in-world
 
-
 ```jsx
 const ui = app.create('ui')
 ui.backgroundColor = 'rgba(0, 0, 0, 0.5)'
@@ -61,7 +60,7 @@ Whether the canvas is doublesided. Defaults to `false`.
 
 ### `.billboard`: String
 
-Makes the UI face the camera. Can be `null`, `full` or `y`. Default to `null`.
+Makes the UI face the camera. Can be `null`, `full` or `y-axis`. Default to `null`.
 
 ### `.pivot`: String
 
@@ -69,11 +68,15 @@ Determines where the "center" of the UI is.
 Options are: `top-left`, `top-center`, `top-right`, `center-left`, `center`, `center-right`, `bottom-left`, `bottom-center`, `bottom-right`.
 Defaults to `center`.
 
-### .offset: Vector3
-Only applicable when using screen-space. The offset in pixels applied after the position value.
+### `.offset`: Vector3
 
-### .pointerEvents: Boolean
-Whether the UI should receive or ignore pointer events. Defaults to true. If you are building informational screen-space UI that does not need to respond to pointer events, this should be set to false for an improved user experience.
+Only applicable when using screen-space.
+The offset in pixels applied after the `position` value.
+
+### `.pointerEvents`: Boolean
+
+Whether the UI should receive or ignore pointer events. Defaults to `true`.
+If you are building informational screen-space UI that does not need to respond to pointer events, this should be set to `false` for an improved user experience.
 
 ### `.backgroundColor`: String
 
