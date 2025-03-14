@@ -61,7 +61,7 @@ Whether the canvas is doublesided. Defaults to `false`.
 
 ### `.billboard`: String
 
-Makes the UI face the camera. Can be `null`, `full` or `y-axis`. Default to `null`.
+Makes the UI face the camera. Can be `null`, `full` or `y`. Default to `null`.
 
 ### `.pivot`: String
 
