@@ -6,12 +6,13 @@ description: Apps can expose a list of custom UI fields allowing non-technical p
 import { Aside } from '@astrojs/starlight/components';
 
 <Aside>
-This was updated to match latest [commit to dev branch](https://github.com/hyperfy-xyz/hyperfy/commit/48c16fc18c46ebe9c9def96592c0531d717e7194) on 16 Feb.
+This was updated to match latest [commit to dev branch](https://github.com/hyperfy-xyz/hyperfy/commit/6b83293b60dbebb288af7469aca59955ff5e0246) on 10 Mar.
 
 </Aside>
 
 
 Apps can expose a list of custom UI fields allowing non-technical people to configure or change the way your apps work.
+
 
 ## Configure
 
@@ -179,5 +180,20 @@ A simple section header to help group fields together
   type: 'section',
   key: String,           // a unique `key` to represent this section
   label: String,         // the label for the section header
+}
+```
+
+### Buttons
+
+Displays one or more buttons that when clicked, execute something in the running app.
+
+```jsx
+{
+  type: 'buttons',
+  key: String,           // a unique `key` for this button
+  label: String,         // the label for the button
+  buttons: [
+    ...{ label: String, onClick: Function },
+  ]
 }
 ```
