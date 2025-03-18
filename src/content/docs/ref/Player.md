@@ -3,7 +3,7 @@ title: Player
 description: Represents a player. An instance of Player can be retrived from events or via World.getPlayer
 ---
 
-Represents a player. An instance of Player can be retrived via [World.getPlayer](/docs/ref/World.md)
+Represents a player. An instance of Player can be retrived via [World.getPlayer](/ref/world)
 
 ## Properties
 
@@ -45,7 +45,7 @@ Teleports the player instantly to the new position. The `rotationY` value is in 
 
 Returns a matrix of the bone transform in world space.
 
-See [Avatar](/docs/ref/Avatar.md) for full details.
+See [Avatar](/ref/avatar) for full details.
 
 ### `.damage(amount)`
 
@@ -61,7 +61,7 @@ Applies an effect to the player. If the player already has an effect, it is repl
 
 All options are optional.
 
-**anchor**: an [Anchor](/docs/ref/Anchor.md) to attach the player to
+**anchor**: an [Anchor](/ref/anchor) to attach the player to
 
 **emote**: a url to an emote to play while this effect is active
 
