@@ -32,6 +32,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
 						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
+						{ label: 'History of Hyperfy', slug: 'welcome/hyperfy-history' },
 					],
 				},
 				{
