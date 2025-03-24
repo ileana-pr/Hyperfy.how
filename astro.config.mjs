@@ -100,7 +100,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Hyperfy Docs',
+					label: 'Hyperfy v2 Docs',
 					collapsed: true,
 					items: [
 								{ label: 'Getting Started', slug: 'docs/getting-started' },
