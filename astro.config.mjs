@@ -193,7 +193,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 
-								{ label: 'Web3 ', slug: 'guides/web3' },
+								{ label: 'Web3 General', slug: 'guides/web3' },
 								{ label: 'Solana', slug: 'guides/web3/solana' },
 								{ label: 'EVM', slug: 'guides/web3/evm' },
 							],

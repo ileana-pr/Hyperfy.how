@@ -1,10 +1,10 @@
 ---
-title: RigidBody
-description: A rigidbody that has colliders as children will act under physics.
+title: rigidBody
+description: A rigidBody that has colliders as children will act under physics.
 ---
 import { Aside } from '@astrojs/starlight/components';
 
-A rigidbody that has colliders as children will act under physics.
+A rigidBody that has colliders as children will act under physics.
 
 <Aside>contacts, triggers, forces, etc are left out of the docs until they are ratified.</Aside>
 
@@ -12,17 +12,17 @@ A rigidbody that has colliders as children will act under physics.
 
 ### `.type`: String
 
-The type of rigidbody, either `static`, `kinematic` or `dynamic`. Defaults to `static`.
+The type of rigidBody, either `static`, `kinematic` or `dynamic`. Defaults to `static`.
 
-NOTE: if you plan to move the rigidbody with code without being dynamic, use `kinematic` for performance reasons.
+NOTE: if you plan to move the rigidBody with code without being dynamic, use `kinematic` for performance reasons.
 
 ### `.onContactStart`: Function (Experimental)
 
-The function to call when a child collider generates contacts with another rigidbody.
+The function to call when a child collider generates contacts with another rigidBody.
 
 ### `.onContactEnd`: Function (Experimental)
 
-The function to call when a child collider ends contacts with another rigidbody.
+The function to call when a child collider ends contacts with another rigidBody.
 
 ### `.onTriggerEnter`: Function (Experimental)
 
