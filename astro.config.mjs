@@ -130,7 +130,7 @@ export default defineConfig({
 								{ label: 'Num', slug: 'ref/num' },
 								{ label: 'Player', slug: 'ref/player' },
 								{ label: 'Props', slug: 'ref/props' },
-								{ label: 'RigidBody', slug: 'ref/rigidBody' },
+								{ label: 'rigidBody', slug: 'ref/rigidBody' },
 								{ label: 'UI', slug: 'ref/ui' },
 								{ label: 'UIText', slug: 'ref/ui-text' },
 								{ label: 'UIView', slug: 'ref/ui-view' },
