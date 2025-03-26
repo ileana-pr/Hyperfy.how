@@ -13,6 +13,16 @@ Learn how to [Optimize Assets](/guides/3d/optimizing/).
 
 ---
 
+## Hyperfy Logos
+
+[![circle](/assets/logoCircle.webp)](/assets/logoCircle.webp)
+
+[![fullLogos](/assets/logosfull.webp)](/assets/logosfull.webp)
+
+[![boltlogo](/assets/bolthyperfy.webp)](/assets/bolthyperfy.webp)
+
+---
+
 ## Hyperduck. by Bogie
 
 [Hyperduck.glb](https://github.com/Innkeeping/Hyperfy.how/blob/main/public/assets/hyperduck.glb)
