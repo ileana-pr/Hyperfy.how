@@ -1,0 +1,74 @@
+
+---
+title: Adding collisions to meshes
+description: Adding colliders to meshes in Blender
+---
+
+### Basic collider
+There are a few occassions when you might want a simple collision but usually you'll need to structure your object with a hierarchy like below in the [#Dynamic-collider](#Dynamic-collider) section. Let's imagine you do actually want a simple sphere to act as a collider. You would create the following hierarchy in your Blender object:
+```
+MyBall (Empty)
+├── BallMesh (Detailed sphere if you need one)
+└── PhysicsSphere (Simple sphere mesh)
+    └── Custom Properties:
+        node = "rigidbody"
+        type = "dynamic"
+        node = "collider"
+        convex = true
+```
+To set the custom properties you select your mesh (simple sphere in this example) and scroll down to the bottom and add a new custom property like this:
+![blender_hBt5JNVUNI](https://hackmd.io/_uploads/HJmzqoXPkx.png)
+- click OK and then set the value to 'collider' so it looks like this:
+![blender_nEzAWBJJCu](https://hackmd.io/_uploads/rkQLcj7Dyx.png)
+
+If you want to create a fancy ball (eg one with football panels/decals etc.) you'd add that as a sibling of PhysicsSphere so that it isn't used in the physics calculations.
+
+For anything more complicated that this you will want to separate the collision and rigidbody meshes as shown in the next section.
+
+### Dynamic collider
+To create a collider that responds to physics you need to create an object with the following structure:
+
+```
+MyDynamicObject (Empty/Group)
+├── DetailedMesh (Complex mesh - what the thing looks like)
+└── RigidBody (Empty or minimal mesh)
+    └── Custom Properties:
+        node = "rigidbody"
+        type = "static" | "kinematic" | "dynamic"
+        mass = [number value >= 0] (see note below)
+        tag = [optional string, cannot be "player"]
+    └── CollisionShape (Simplified collision mesh)
+        └── Custom Properties:
+            node = "collider"
+            convex = [true/false]
+```
+_Note: mass is not currently supported so just leave it out - it will be set to a default of 1._
+
+#### RigidBody types
+
+Looking at the RigidBody.js code, there are three types defined:
+
+```javascript
+const types = ['static', 'kinematic', 'dynamic']
+```
+
+Here's what each does:
+
+1. `static` - For immovable objects like walls, floors, or fixed furniture. The code shows these create a `createRigidStatic` PhysX actor which:
+   - Won't move when hit
+   - Other objects will collide with it
+   - Most efficient performance-wise
+
+2. `dynamic` - For objects that should move realistically with physics. Creates a `createRigidDynamic` PhysX actor that:
+   - Will respond to gravity
+   - Will bounce/collide with other objects
+   - Will be pushed by forces
+   - Uses the mass property for physics calculations
+
+3. `kinematic` - For objects that move but aren't affected by physics. Also creates a `createRigidDynamic` actor but sets the `KINEMATIC` flag:
+   - Can be moved programmatically
+   - Other objects will collide with it
+   - Won't respond to gravity or forces
+   - Mass is less important since it's not physics-driven
+
+So for your example - if you want the object to fall and bounce realistically, use `type="dynamic"`. If it should stay perfectly still, use `type="static"`. Use `kinematic` if you want to move it programmatically but still have other objects collide with it.

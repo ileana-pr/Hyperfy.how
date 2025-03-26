@@ -176,8 +176,10 @@ export default defineConfig({
 
 								{ label: 'Optimizing Assets', slug: 'guides/3d/optimizing' },
 								{ label: 'Models', slug: 'guides/3d/models' },
+								{ label: 'Colliders to Meshes', slug: 'guides/3d/meshes' },
 								{ label: 'Blender', slug: 'guides/3d/blender' },
 								{ label: 'Other tools', slug: 'guides/3d/tools' },
+
 							],
 						},
 						{
