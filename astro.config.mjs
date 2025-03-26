@@ -40,10 +40,11 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{ label: 'Open Source Contributors', slug: 'community/contributors' },
+						{ label: 'Hyperfy Branding', slug: 'community/branding' },
 						{ label: 'Video Tutorials Series', slug: 'community/tutorials' },
 						{ label: 'Community Assets', slug: 'community/assets' },
 						{ label: 'Community Projects', slug: 'community/projects' },
-						{ label: 'Hyperfy Colors', slug: 'community/branding' },
+
 
 						{
 							label: 'Builders Calls',

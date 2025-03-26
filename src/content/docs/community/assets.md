@@ -15,11 +15,7 @@ Learn how to [Optimize Assets](/guides/3d/optimizing/).
 
 ## Hyperfy Logos
 
-[![circle](/assets/logoCircle.webp)](/assets/logoCircle.webp)
-
-[![fullLogos](/assets/logosfull.webp)](/assets/logosfull.webp)
-
-[![boltlogo](/assets/bolthyperfy.webp)](/assets/bolthyperfy.webp)
+[See Branding](/community/branding)
 
 ---
 

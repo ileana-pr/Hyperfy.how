@@ -1,12 +1,23 @@
 ---
-title: Hyperfy Colors
-description: Hyperfy Colors Hex/RGB/HSL
+title: Hyperfy Branding
+description: Hyperfy Branding Assets & Colors
 ---
 
-### Hyperfy Colors
+### Hyperfy Logos
+
+[![circle](/assets/logoCircle.webp)](/assets/logoCircle.webp)
+
+[![fullLogos](/assets/logosfull.webp)](/assets/logosfull.webp)
+
+[![boltlogo](/assets/bolthyperfy.webp)](/assets/bolthyperfy.webp)
+
+
+---
+
+### Hyperfy Colors Swatch
 [![Hyperfy Brand Colors](/assets/brandColors.webp)](/assets/brandColors.webp)
 
-### Hex/RGB/HSL
+### Hex/RGB/HSL Individual
 
 [![#D90479](/assets/pinkhex.webp)](/assets/pinkhex.webp)
 
