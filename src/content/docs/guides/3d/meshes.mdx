@@ -5,7 +5,7 @@ description: Adding colliders to meshes in Blender
 ---
 
 ### Basic collider
-There are a few occassions when you might want a simple collision but usually you'll need to structure your object with a hierarchy like below in the [#Dynamic-collider](#Dynamic-collider) section. Let's imagine you do actually want a simple sphere to act as a collider. You would create the following hierarchy in your Blender object:
+There are a few occassions when you might want a simple collision but usually you'll need to structure your object with a hierarchy like below in the [#Dynamic-collider](#dynamic-collider) section. Let's imagine you do actually want a simple sphere to act as a collider. You would create the following hierarchy in your Blender object:
 ```
 MyBall (Empty)
 ├── BallMesh (Detailed sphere if you need one)
@@ -31,7 +31,7 @@ To create a collider that responds to physics you need to create an object with 
 ```
 MyDynamicObject (Empty/Group)
 ├── DetailedMesh (Complex mesh - what the thing looks like)
-└── RigidBody (Empty or minimal mesh)
+└── rigidbody (Empty or minimal mesh)
     └── Custom Properties:
         node = "rigidbody"
         type = "static" | "kinematic" | "dynamic"
@@ -44,7 +44,7 @@ MyDynamicObject (Empty/Group)
 ```
 _Note: mass is not currently supported so just leave it out - it will be set to a default of 1._
 
-#### RigidBody types
+#### rigidbody types
 
 Looking at the RigidBody.js code, there are three types defined:
 
