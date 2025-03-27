@@ -109,7 +109,7 @@ export default defineConfig({
 								{ label: 'Commands', slug: 'docs/commands' },
 								{ label: 'Scripts', slug: 'docs/scripts' },
 								{ label: '.hyp Format', slug: 'docs/hyp-format' },
-								{ label: 'Blender Exporter', slug: 'docs/blender-exporter' },
+								{ label: 'Blender Scripts', slug: 'docs/blender-scripts' },
 
 						{
 							label: 'ref',
