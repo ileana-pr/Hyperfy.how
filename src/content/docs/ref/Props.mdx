@@ -5,11 +5,6 @@ description: Apps can expose a list of custom UI fields allowing non-technical p
 
 import { Aside } from '@astrojs/starlight/components';
 
-<Aside>
-This was updated to match latest [commit to dev branch](https://github.com/hyperfy-xyz/hyperfy/commit/6b83293b60dbebb288af7469aca59955ff5e0246) on 10 Mar.
-
-</Aside>
-
 
 Apps can expose a list of custom UI fields allowing non-technical people to configure or change the way your apps work.
 
@@ -101,9 +96,24 @@ A range slider input
 }
 ```
 
+### Toggle
+
+A boolean toggle field
+
+```jsx
+{
+  type: 'toggle',
+  key: String,           // the key on `props` to set this value
+  label: String,         // the label for the text input
+  trueLabel: String,     // optional, defaults to "Yes"
+  falseLabel: String,    // optional, defaults to "No"
+  initial: String,       // the initial value to set if not configured
+}
+```
+
 ### Switch
 
-A switch input
+A switch field with many options
 
 ```jsx
 {
@@ -113,25 +123,6 @@ A switch input
   options: [
     {
       label: String,     // the label to show on this switch item
-      value: String,     // the value to set on the props when selected
-    }
-  ],
-  initial: String,       // the initial value to set if not configured
-}
-```
-
-### Dropdown
-
-A dropdown menu
-
-```jsx
-{
-  type: 'dropdown',
-  key: String,           // the key on `props` to set this value
-  label: String,         // the label for the text input
-  options: [
-    {
-      label: String,     // the label to show on this item
       value: String,     // the value to set on the props when selected
     }
   ],
@@ -171,29 +162,15 @@ const audio = app.create('audio', {
 audio.play()
 ```
 
-### Section
+### Button
 
-A simple section header to help group fields together
-
-```jsx
-{
-  type: 'section',
-  key: String,           // a unique `key` to represent this section
-  label: String,         // the label for the section header
-}
-```
-
-### Buttons
-
-Displays one or more buttons that when clicked, execute something in the running app.
+Displays a button that when clicked, executes something in the running app.
 
 ```jsx
 {
-  type: 'buttons',
+  type: 'button',
   key: String,           // a unique `key` for this button
   label: String,         // the label for the button
-  buttons: [
-    ...{ label: String, onClick: Function },
-  ]
+  onClick: Function,
 }
 ```
