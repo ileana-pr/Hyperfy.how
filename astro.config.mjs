@@ -135,6 +135,7 @@ export default defineConfig({
 								{ label: 'UI', slug: 'ref/ui' },
 								{ label: 'UIText', slug: 'ref/ui-text' },
 								{ label: 'UIView', slug: 'ref/ui-view' },
+								{ label: 'UIImage', slug: 'ref/ui-image' },
 								{ label: 'World', slug: 'ref/world' },
 							],
 						},
