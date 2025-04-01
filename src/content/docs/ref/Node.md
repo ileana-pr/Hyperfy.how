@@ -3,6 +3,7 @@ title: Node
 description: The base class for all other nodes.
 ---
 
+
 The base class for all other nodes.
 
 ## Properties
@@ -37,6 +38,10 @@ The world matrix of this node in global space.
 
 The parent node, if any.
 
+### `.children`: [Node]
+
+The child nodes.
+
 ## Methods
 
 ### `.add(otherNode)`: Self
@@ -50,3 +55,7 @@ Removes `otherNode` if it is a child of this node.
 ### `.traverse(callback)`
 
 Traverses this and all descendents calling `callback` with the node in the first argument.
+
+
+
+

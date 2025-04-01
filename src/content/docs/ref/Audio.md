@@ -5,6 +5,10 @@ description: Represents a single audio clip that can be played in the world.
 
 Represents a single audio clip that can be played in the world.
 
+# Audio
+
+Represents a single audio clip that can be played in the world.
+
 ## Properties
 
 ### `.src`: String
@@ -67,7 +71,7 @@ Gets and sets the current playback time, in seconds.
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node.md) properties
+Inherits all [Node](/ref/node) properties
 
 ## Methods
 

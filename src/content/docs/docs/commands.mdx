@@ -5,7 +5,7 @@ description: Commands for in world Hyperfy v2.
 import { Aside } from '@astrojs/starlight/components';
 
 <Aside type="caution">
-From [2 Feb 25](https://github.com/hyperfy-xyz/hyperfy/tree/main/docs)  - things move fast - may change from in-alpha
+From [20 Feb 25](https://github.com/hyperfy-xyz/hyperfy/tree/main/docs)  - things move fast - may change from in-alpha
 </Aside>
 
 
@@ -23,16 +23,35 @@ If your world has an admin code set, the only way to become an admin is to use t
 
 If you're .env doesn't have an ADMIN_CODE set, then all players are given the admin role by default.
 
+---
+
 ### `/spawn set`
 
 Sets the spawn point for all future players entering the world, to the current position and direction you are facing. Requires admin role.
 
+---
+
 ### `/spawn clear`
 
 Resets the spawn point back to origin. Requires admin role.
+
+---
 
 ### `/name <name>`
 
 Sets your name.
 This is currently the only way to change your name, until the UI for it is built.
 This is stored locally on your device and will erase by clearing your browser cache.
+
+---
+
+### `/chat clear`
+
+Clear the chat.
+
+---
+
+### `/stats`
+
+See fps/cpu/gpu usage in top left of screen.
+

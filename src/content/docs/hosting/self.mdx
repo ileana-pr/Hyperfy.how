@@ -3,8 +3,23 @@ title: Self-Hosting
 description: Self-hosting Hyperfy v2 worlds.
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 import { LinkPreview } from 'astro-embed';
 import { Badge } from '@astrojs/starlight/components';
+
+
+'Self-hosting' means that you are in control of the server and need to get it started yourself.
+
+For a more hands-off approach, and to have it hosted by others for a cost, check out:
+
+<LinkCard title="Hosting Providers" href="/hosting/providers/" />
+
+<LinkCard title="Video Tutorial - Ep2" href="/community/tutorials/#episode-2" />
+
+<LinkCard title="Install Hyperfy v2 via Quick Start 🚀" href="/setup/quickstart" />
+
+
+---
 
 
 [Fly.io](/hosting/self/#fly.io)
@@ -23,13 +38,11 @@ import { Badge } from '@astrojs/starlight/components';
 
 ## Fly.io
 
-[Install Hyperfy v2 via Quick Start](/quickstart/installation/#install)
 
 Add this as `fly.toml` in the root folder of your project (`my-world`)
-change 'yourappname' to your project name (`my-world`) and Save.
+change '[yourappname]' to your project name (`my-world`) and Save.
 
 ```sh frame="none"
-
 app = '[yourappname]'
 primary_region = 'ams'
 
@@ -68,13 +81,156 @@ primary_region = 'ams'
   cpus = 1
 ```
 
-Make an account on [Fly.io](https://fly.io/)
+### Follow Fly.io Quick start
 
-In the terminal `cd my-world` and run `fly deploy`
+<LinkCard title="Install the Fly.io CLI" href="https://fly.io/docs/getting-started/launch/" />
+
+This will help you make an account on [Fly.io](https://fly.io/) and install the Fly CLI, so `fly` commands will work.
+
+In the terminal `cd my-world` and run `fly launch`
+
+It most likely will auto-run `fly deploy` as well.  If prompted after `fly launch`, run `fly deploy`.
+
+Your world will deploy to https://[yourappname].fly.dev.
+<Badge text="Success" variant="success" />
+
+The next time you want to update deployment, run `fly deploy`.
+
+### Custom Domain
+To add custom domain follow their [docs](https://fly.io/docs/networking/custom-domain/)  *Cloudfare seems to have issues, check their tips*
 
 
 ---
+---
 
+
+## Coolify Installation Guide:
+**From Zero to Hyper Cool - [guide by Howie Duhzit](https://github.com/howieduhzit)**
+
+<Badge text="Free" variant="caution" />
+
+An open-source & self-hostable Heroku / Netlify / Vercel alternative.
+
+<LinkPreview id="https://coolify.io/" />
+
+## Prerequisites
+
+### 1. Purchase a Domain Name
+- **Recommended**: [Spaceship](https://www.spaceship.com/) - offers simple domain registration with competitive pricing
+- Other options:
+  - Namecheap
+  - GoDaddy
+  - Google Domains
+  - Cloudflare Registrar
+- Select and purchase your preferred domain name
+- Make sure you have access to the domain's DNS management panel
+
+### 2. Acquire a Host/Server
+- **Recommended**: [Spaceship](https://www.spaceship.com/) - provides reliable VPS hosting with excellent performance for Coolify deployments
+- Other quality VPS providers:
+  - DigitalOcean
+  - Linode/Akamai
+  - AWS
+  - Vultr
+  - Hetzner
+
+- Minimum specifications:
+  - At least 2GB RAM
+  - 1+ CPU cores
+  - 20+ GB SSD storage
+  - Ubuntu 20.04 or newer recommended
+
+### 3. Configure DNS Records
+1. Log in to your domain registrar's DNS management panel
+2. Create an A record for the root domain (`@`):
+   - Type: A
+   - Name: `@` (represents the root domain)
+   - Value: Your server's IP address (e.g., `203.0.113.1`)
+   - TTL: 60 (or lowest)
+
+3. Create a wildcard A record to point all subdomains to the same server:
+   - Type: A
+   - Name: `*` (represents all possible subdomains)
+   - Value: Your server's IP address (same as above)
+   - TTL: 60 (or lowest)
+
+#### Example DNS Configuration:
+
+```sh frame="none"
+Type    Name    Value           TTL
+A       @       203.0.113.1     60 (or lowest)
+A       *       203.0.113.1     60 (or lowest)
+```
+
+This configuration ensures that:
+- Your main domain (e.g., `yourdomain.com`) points to your server
+- All subdomains (e.g., `cool.yourdomain.com`, `app.yourdomain.com`) also point to the same server
+
+> **Note:** DNS changes can take anywhere from a few minutes to 48 hours to propagate globally. You can verify propagation using tools like [dnschecker.org](https://dnschecker.org).
+
+## Installing Coolify
+1. Install Coolify on your server:
+   ```bash
+   curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash
+   ```
+   *Reference: [Official Coolify Documentation](https://coolify.io/docs/installation)*
+
+2. Connect to the Coolify interface via https://[YOUR_SERVER_IP]:8000 and create your admin user
+
+3. (OPTIONAL)Configure your host SSH port to match your host if needed, and add the following to Coolify's Caddy Dynamic proxy:
+     *MAKE SURE THIS IS CORRECT BEFORE SAVING!!! EDITING THIS AFTER IS NOT EASY*
+   ```
+   https://cool.yourdomain.com {
+       handle /app/* {
+           reverse_proxy coolify-realtime:6001
+       }
+       handle /terminal/ws {
+           reverse_proxy coolify-realtime:6002
+       }
+       reverse_proxy coolify:8080
+   }
+   ```
+  Now you can access Coolify through your newly configured domain cool.yourdomain.com
+
+## Setting Up Hyperfy
+1. In the Coolify dashboard, create a new Project
+2. Select the production environment
+3. Add a new resource
+4. Under Docker-based options, select "Docker Compose Empty"
+5. Paste in the Hyperfy custom Docker Compose configuration:
+   ```yaml
+   # documentation: https://github.com/hyperfy-xyz/hyperfy
+   # slogan: A Standalone persistent world hosted on your own domain!
+   # tags: ThreeJS,NODE,Hyperfy,Metaverse,Self-Hosted
+   # logo: svgs/hyperfy.svg
+   # port: 3000
+
+   services:
+     hyperfy:
+       image: howieduhzit/hyperfy:latest
+       environment:
+         - SERVICE_FQDN_HYPERFY_3000
+         - JWT_SECRET=${SERVICE_PASSWORD_JWT}
+         - ADMIN_CODE=${SERVICE_PASSWORD_ADMIN}
+         - PUBLIC_WS_URL=${SERVICE_FQDN_HYPERFY}/ws
+         - PUBLIC_API_URL=${SERVICE_FQDN_HYPERFY}/api
+         - PUBLIC_ASSETS_URL=${SERVICE_FQDN_HYPERFY}/assets
+         - SAVE_INTERVAL=${SAVE_INTERVAL:-60}
+         - WORLD=${WORLD:-world}
+         - PUBLIC_MAX_UPLOAD_SIZE=${PUBLIC_MAX_UPLOAD_SIZE:-32}
+       volumes:
+         - type: bind
+           source: ./${WORLD}
+           target: /app/${WORLD}
+           is_directory: true
+   ```
+
+6. Edit the domain configuration and set up your environment variables
+7. Deploy your Hyperfy instance
+8. Connect to your new Hyperfy world and start building!
+
+
+---
 
 ## VPS
 
@@ -592,10 +748,17 @@ Build, test, and deploy applications on Oracle Cloud—for free.
 ---
 
 
-## Coolify
-<Badge text="Free" variant="caution" />
+## Also check out
 
-An open-source & self-hostable Heroku / Netlify / Vercel alternative.
 
-<LinkPreview id="https://coolify.io/" />
+<LinkCard title="CasoOS" href="https://casaos.io/ " />
+
+<LinkCard title="Umbrel" href="https://apps.umbrel.com/ " />
+
+<LinkCard title="Zima" href="https://shop.zimaspace.com/collections/all-products" />
+
+<LinkCard title="OpenWRT routers" href="https://www.gl-inet.com/products/" />
+
+
+---
 

@@ -1,0 +1,313 @@
+---
+title: Detailed Installation
+description: Detailed install for to get building in Hyperfy v2.
+---
+import { Icon } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+import { Badge } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import GithubCard from "astro-github-component";
+
+This will setup a world locally on your machine that you can then [self-host](/hosting/self).
+
+You can start a hosted world from a [hosting provider](/hosting/provider) without needing to setup locally, if you prefer.
+
+---
+
+<Card title="Hyperfy v2 Repo" icon="star">
+
+<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
+
+🌟Star the repo🌟
+
+[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
+</Card>
+
+---
+
+This installation page is detailed to help those who might be fresh in some of these things.
+
+While this is as detailed as possible, and should get you going.. if you really want to learn Foundations of Web Development, [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations) will teach you a lot - for free!
+
+Once you make it through this `install`, most of what you will do will be directly in your Hyperfy v2 world.  Right now, v2 is still mid-development.  So, if you are here now, keep in mind it's early and things will change.  In the near future, v2 will be much more `No-code` for users to build worlds.
+
+However, one of the amazing and fun aspects of Hyperfy is the many skill-rabbitholes you start running down.  So don't be afraid, drop that `imposter syndrome` and learn some new things.
+
+The community is always here to help.
+
+---
+
+## Prerequisites
+
+- wsl2 on Windows
+- `nvm` - Node version manager
+- Node v22.11.0
+- git
+- Xcode Command Line Tools on Mac
+- a web browser
+
+---
+
+<Aside title="WSL2 Recommended">
+On Windows?  Install WSL2. WSL stands for Windows Subsystem for Linux.
+<Icon name="linux" />
+</Aside>
+
+### WSL2
+
+'Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator", or Start Menu> start typing 'Command' > Run Command Prompt as Administrator
+
+In the terminal that opens copy this command and hit Enter:
+
+```sh frame="none"
+wsl --install
+
+```
+
+This command will enable the features necessary to run WSL and install the Ubuntu distribution of Linux.'
+
+The first time you use WSL2, it will ask you to create a `username` and `password` for your new Ubuntu Linux Distribution.
+
+This is a password that only applies to WSL.
+
+You can now find WSL from the Start menu.  Or in the future, open Command Prompt and type `wsl` and it will switch to WSL2.
+
+if you are working from Command Prompt, after typing `wsl` to be sure to be in the `home` folder of your Ubuntu distribution.  To do this, you can type `cd ~` and hit `Enter`.  `~` is above your `tab` key using `shift`.
+
+For troubleshooting WSL2 install or to learn more about it, go to [WSL2-docs](https://learn.microsoft.com/en-us/windows/wsl/)
+
+---
+
+
+### Node and Node Version Manager
+
+After getting WSL2, you will need `Node` and  `Node Version Manager `nvm`.
+
+You can first install `nvm` which will help you install `Node.js` and manage different `Node` versions.
+
+in a WSL2 terminal, run
+
+```sh frame="none"
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+```
+
+`Node.js` is a tool that helps make websites and apps work quickly by efficiently handling tasks on the server side.
+
+After you have installed `nvm`, you can use it to install `Node`.  Again in your WSL2, run:
+
+```sh frame="none"
+nvm install node
+
+```
+Once you have it, it's just a tool accessed in the background.  You won't need to ever 'open' it.
+
+
+For Hyperfy v2, we want to use `**Node 22.11.0**`.  Now that `nvm` and `node` is installed, you can run:
+
+
+```sh frame="none"
+nvm install 22.11.0
+
+```
+This will install Node version `22.11.0`.
+
+If this is the only Node version you you have, you are now on `22.11.0`.  To check or if you already have other Node version, run:
+
+```sh frame="none"
+nvm use 22.11.0
+
+```
+
+Your terminal should say `Using Node v22.11.0`.
+
+<Badge text="Success" variant="success" />
+
+If you get stuck with nvm, check their [repo here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
+---
+
+
+
+## Cloning the Hyperfy v2 Repo
+
+
+<Aside title="You need Git.">
+
+in WSL2 : `sudo apt install git-all`
+
+on mac: `git --version`
+If you don’t have it installed already, it will prompt you to install it.
+
+If for some reason you don't have `Xcode Command Line Tools`:
+enter the command xcode-select --install in the terminal to begin the installation process. You'll see a panel that asks you to install Xcode Command Line Tools.
+
+or check [git site](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you have problems.
+
+To learn more about what `git` is [The Odin Project](https://www.theodinproject.com/lessons/foundations-introduction-to-git) has a great foundational 'course'.
+
+</Aside>
+
+
+<Aside title="Need a Git refresher?" type="tip">
+
+[Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+</Aside>
+
+
+### Cloning the Main Branch
+
+Main branch is where current stable updates have been updated to.  `dev` branch is where the newest development is ironed out and eventually gets pushed to `main`.
+
+
+```sh frame="none"
+
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+cd my-world
+cp .env.example .env
+npm install
+npm run dev
+
+```
+Each separated below for easy copying.
+
+```sh frame="none"
+
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+
+```
+```sh frame="none"
+
+cd my-world
+
+```
+```sh frame="none"
+
+cp .env.example .env
+
+```
+```sh frame="none"
+
+npm install
+
+```
+```sh frame="none"
+
+npm run dev
+
+```
+After above, your world is now running in http://localhost:3000/. Open in browser.
+
+<Badge text="Success" variant="success" />
+
+When your world is not running (you kill the terminal) you can change the `my-world` to anyname you want for your world.
+
+Just remember next time, you will `cd 'new world name'` then `npm run dev`
+
+---
+
+---
+
+### Dev Branch
+
+To work from the `dev` branch:
+
+<Aside title="Alpha Branch" type="caution">
+
+This branch is development.  So it's most recent, but also continuous alpha.  If new, most likely you want to stick to [main branch](https://github.com/hyperfy-xyz/hyperfy.git).
+
+</Aside>
+
+
+```sh frame="none"
+cd my-world
+git fetch origin
+git checkout -t origin/dev
+git pull
+npm run dev
+```
+Each separated below for easy copying.
+
+```sh frame="none"
+cd my-world
+
+```
+
+```sh frame="none"
+
+git fetch origin
+
+```
+
+```sh frame="none"
+
+git checkout -t origin/dev
+
+```
+
+```sh frame="none"
+
+git pull
+
+```
+
+```sh frame="none"
+
+npm run dev
+
+```
+
+
+---
+
+<Badge text="Success" variant="success" />
+Your world is now running in http://localhost:3000/. Open in browser.
+
+
+----
+
+## Start building
+
+### Hosting
+
+When you're ready to host, choose between:
+
+<LinkCard title="Self-hosting" href="/hosting/self" />
+<LinkCard title="Hosting Provider" href="/hosting/provider" />
+
+---
+
+<LinkCard title="Still intimidated?  Go play in the sandbox. 🎮  " href="https://play.hyperfy.xyz/" />
+
+
+
+---
+
+<LinkCard title="Visit Getting-started for docs on developing. 📖" href="/docs/getting-started" />
+
+
+
+---
+
+<Aside type="tip" title="Have fun!">
+Hop in the [Discord](https://discord.gg/KbgAua7XXS) if you get stuck or inspired.
+
+Share what you're cooking on [X](https://x.com/hyperfy_io) and tag @hyperfy_io
+</Aside>
+
+---
+
+### FAQs
+
+- [Developer FAQs](/faq/developer)
+- [Creator FAQs](/faq/creator)
+
+If you run into please feel free to join Hyperfy [Discord](https://discord.gg/KbgAua7XXS) to ask for help.  The community is knowledgeable and very supportive.
+
+---
+
+### Need help coding?
+
+<LinkCard title="AI can be your friend, and the community is here to help." href="/guides/coding/ai/" />

@@ -71,4 +71,4 @@ Defaults to `normal`, can also be a number like `100` or string like `bold`.
 
 ### `.{...Node}`
 
-Inherits all [Node](/ref/Node.md) properties
+Inherits all [Node](/ref/Node) properties

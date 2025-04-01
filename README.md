@@ -1,16 +1,52 @@
-*You can click 'Edit Page' on the bottom of any page to go directly to it in repo*
+New updates
+
+*You can click 'Edit Page' on the bottom of any page to go directly to it in repo and prompt you to fork*
 
 Hyperfy.how is a living community resource for [Hyperfy v2.](https://github.com/hyperfy-xyz/hyperfy)
 
 It will continue to evolve as Hyperfy v2 progresses. (with your help! 🚀)
 
-Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  (be sure to start with frontmatter format of all others)
+Easily add resources in markdown to the appropriate .md or .mdx file.  If needed, create a new file.  Be sure to start with frontmatter format of all others, for templates go to `src/templates` and copy paste into appropriate folder.  Add folder if needed.
 
-Sidebar and page link will autogenerate on 'resources' section based on the frontmatter title of the file in the 'resources' folder.
 
-'resources' sidebar will be in order based on the .md/.mdx file name.
+For sidebar and routing, you will need to add to astro.config.mjs. Order is based on astro.config.mjs.  Easiest is to copy from above and edit.  You can have nested sidebars.  You can have an index.md/mdx in a nested folder.
 
-On 'guides' and up to 'welcome' section, you will need to add to astro.config.mjs. Order is based on astro.config.mjs.  Easiest is to copy from above and edit.  You can have nested sidebars.
+For example, `guides/web3` will direct to `guides/web3/index`.  You don't need to say index, and it will url to guides/web3.
+
+---
+
+For images, recommend to convert to .webp [Image Magick is one great way](https://imagemagick.org/)  or [Photopea is another](https://www.photopea.com/).  Both free and open-source tools.
+
+Drop images in `public/assets`
+
+`[![name](/assets/photo.webp)](/assets/photo.webp)` in .md/.mdx file will display image and allow it to be clicked to enlarge.
+
+
+For embeds, badges, asides - check the `/src/templates/example.mdx`
+
+---
+
+Fork and clone
+
+```sh frame="none"
+git clone [your-repo-url]
+cd [your-repo-name]
+```
+
+```sh frame="none"
+pnpm install
+pnpm dev
+```
+http://localhost:4321/
+
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/innkeeping/hyperfy.how/tree/main/)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/innkeeping/hyperfy.how/tree/main/)
+
+
+---
+
+All PR merges will auto-build via netlify and deploy live.
 
 ---
 

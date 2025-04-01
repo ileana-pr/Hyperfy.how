@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 
+
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
@@ -31,88 +32,119 @@ export default defineConfig({
 					items: [
 						{ label: 'Contribute to Docs', slug: 'welcome/contribute' },
 						{ label: 'What is Hyperfy?', slug: 'welcome/what-is-hyperfy' },
-						{ label: 'FAQs', slug: 'welcome/faq' },
-
-						{
-							label: 'Brand & Token',
-							items: [
-								{ label: 'Hyperfy Colors', slug: 'brand/colors' },
-								{ label: '$Hyper Token', slug: 'brand/token' },
-								{ label: 'Hyperball', slug: 'brand/hyperball' },
-							],
-						},
-						{
-							label: 'Socials',
-							items: [
-								{ label: 'Tweets', slug: 'socials/x' },
-								{ label: 'Youtube', slug: 'socials/youtube' },
-								{ label: 'Bluesky', slug: 'socials/bluesky' },
-							],
-						},
+						{ label: 'History of Hyperfy', slug: 'welcome/hyperfy-history' },
 					],
 				},
 				{
 					label: 'Community',
+					collapsed: true,
 					items: [
 						{ label: 'Open Source Contributors', slug: 'community/contributors' },
+						{ label: 'Hyperfy Branding', slug: 'community/branding' },
+						{ label: 'Video Tutorials Series', slug: 'community/tutorials' },
 						{ label: 'Community Assets', slug: 'community/assets' },
-						{ label: 'Projects', slug: 'community/projects' },
-						{ label: 'Videos', slug: 'community/videos' },
+						{ label: 'Community Projects', slug: 'community/projects' },
+
+
+						{
+							label: 'Builders Calls',
+							collapsed: true,
+							items: [
+								{ label: 'All Calls', slug: 'community/calls' },
+								{ label: '12 March 2025', slug: 'community/calls/12mar' },
+								{ label: '5 March 2025', slug: 'community/calls/5mar' },
+								{ label: '21 Feb 2025', slug: 'community/calls/21feb' },
+								{ label: '13 Feb 2025', slug: 'community/calls/13feb' },
+								{ label: '6 Feb 2025', slug: 'community/calls/6feb' },
+
+							],
+						},
+
+						{
+							label: 'Socials',
+							collapsed: true,
+							items: [
+								{ label: 'Tweets', slug: 'socials/x' },
+								{ label: 'Bluesky', slug: 'socials/bluesky' },
+								{ label: 'Videos', slug: 'socials/videos' },
+
+							],
+						},
+
+
+
+
 					],
 				},
 				{
-					label: 'Quick Start 🚀',
+					label: 'Setup',
 					items: [
-						{ label: 'Installation', slug: 'quickstart/installation' },
+						{ label: 'Quick Start👩‍💻🚀 ', slug: 'setup/quickstart' },
+						{ label: 'Detailed Installation 👶🤝', slug: 'setup/detailed' },
+
+						{
+							label: 'v2 Hosting',
+							collapsed: true,
+							items: [
+								{ label: 'Self Hosting', slug: 'hosting/self' },
+								{ label: 'Hosting Providers', slug: 'hosting/providers' },
+							],
+						},
 					],
 				},
 				{
-					label: 'v2 Hosting',
+					label: 'FAQs',
+					collapsed: true,
 					items: [
-						{ label: 'Self Hosting', slug: 'hosting/self' },
-						{ label: 'Hosting Providers', slug: 'hosting/providers' },
+						{ label: 'Developer FAQs', slug: 'faq/developer' },
+						{ label: 'Creator FAQs', slug: 'faq/creator' },
 					],
 				},
 				{
-					label: 'Docs',
+					label: 'Hyperfy v2 Docs',
+					collapsed: true,
 					items: [
 								{ label: 'Getting Started', slug: 'docs/getting-started' },
 								{ label: 'Models', slug: 'docs/models' },
 								{ label: 'Commands', slug: 'docs/commands' },
 								{ label: 'Scripts', slug: 'docs/scripts' },
 								{ label: '.hyp Format', slug: 'docs/hyp-format' },
-								{ label: 'Blender Exporter', slug: 'docs/blender-exporter' },
-								{ label: 'Global num Method', slug: 'docs/num-method' },
+								{ label: 'Blender Scripts', slug: 'docs/blender-scripts' },
 
 						{
 							label: 'ref',
+							collapsed: true,
 							items: [
 								// Each item here is one entry in the navigation menu.
-								{ label: 'ref Index', slug: 'docs/ref' },
+								{ label: '-Index', slug: 'ref' },
 								{ label: 'Action', slug: 'ref/action' },
+								{ label: 'Anchor', slug: 'ref/anchor' },
 								{ label: 'App', slug: 'ref/app' },
 								{ label: 'Audio', slug: 'ref/audio' },
+								{ label: 'Avatar', slug: 'ref/avatar' },
 								{ label: 'Collider', slug: 'ref/collider' },
 								{ label: 'Group', slug: 'ref/group' },
 								{ label: 'LOD', slug: 'ref/lod' },
 								{ label: 'Material', slug: 'ref/material' },
 								{ label: 'Mesh', slug: 'ref/mesh' },
 								{ label: 'Node', slug: 'ref/node' },
+								{ label: 'Num', slug: 'ref/num' },
+								{ label: 'Player', slug: 'ref/player' },
 								{ label: 'Props', slug: 'ref/props' },
-								{ label: 'RigidBody', slug: 'ref/rigid-body' },
+								{ label: 'rigidbody', slug: 'ref/rigid-body' },
 								{ label: 'UI', slug: 'ref/ui' },
 								{ label: 'UIText', slug: 'ref/ui-text' },
 								{ label: 'UIView', slug: 'ref/ui-view' },
+								{ label: 'UIImage', slug: 'ref/ui-image' },
 								{ label: 'World', slug: 'ref/world' },
 							],
 						},
 					],
 				},
 				{
-					label: 'Guides',
+					label: 'Guides/Resources',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Hyperfy Fork Guide', slug: 'guides/hyperfy_fork_guide' },
 						{ label: 'Optimizing Assets', slug: 'guides/optimizing' },
 						// { label: 'Docs', slug: 'guides/docs' },
 					],

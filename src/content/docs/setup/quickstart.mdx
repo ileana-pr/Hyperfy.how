@@ -1,0 +1,214 @@
+---
+title: Quick Start Installation
+description: Quick start to get building in Hyperfy v2.
+---
+import { Icon } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Badge } from '@astrojs/starlight/components';
+import GithubCard from "astro-github-component";
+
+
+This will setup a world locally on your machine that you can then [self-host](/hosting/self).
+
+You can start a [hosted world](/hosting/providers) from a hosting provider without needing to setup locally, if you prefer.
+
+---
+
+<Card title="Hyperfy v2 Repo" icon="star">
+
+<GithubCard owner="hyperfy-xyz" repo="hyperfy"/>
+
+🌟Star the Repo🌟
+
+[Super fresh is on dev branch](https://github.com/hyperfy-xyz/hyperfy/tree/dev)
+</Card>
+
+---
+
+## Prerequisites
+
+
+<Aside title="WSL2 Recommended">
+
+[On Windows?  Install WSL2](/guides/coding/#wsl2)
+
+<Icon name="linux" />
+</Aside>
+
+
+### Node 22.11.0
+
+(eg via [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating))
+
+```sh frame="none"
+nvm install 22.11.0
+
+```
+```sh frame="none"
+
+nvm use 22.11.0
+
+```
+---
+
+## Install
+
+### Main Branch
+
+```sh frame="none"
+
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+cd my-world
+cp .env.example .env
+npm install
+npm run dev
+
+```
+Each separated below for easy copying.
+
+```sh frame="none"
+
+git clone https://github.com/hyperfy-xyz/hyperfy.git my-world
+
+```
+```sh frame="none"
+
+cd my-world
+
+```
+```sh frame="none"
+
+cp .env.example .env
+
+```
+```sh frame="none"
+
+npm install
+
+```
+```sh frame="none"
+
+npm run dev
+
+```
+
+After above, your world is now running in http://localhost:3000/. Open in browser.
+
+<Badge text="Success" variant="success" />
+
+When your world is not running (you kill the terminal) you can change the `my-world` to anyname you want for your world.
+
+Just remember next time, you will `cd 'new world name'` then `npm run dev`
+
+---
+
+---
+
+### Dev Branch
+
+To work from the `dev` branch:
+
+<Aside title="Alpha Branch" type="caution">
+
+This branch is development.  So it's most recent, but also continuous alpha.  If new, most likely you want to stick to [main branch](https://github.com/hyperfy-xyz/hyperfy.git).
+
+</Aside>
+
+
+```sh frame="none"
+cd my-world
+git fetch origin
+git checkout -t origin/dev
+git pull
+```
+Each separated below for easy copying.
+
+```sh frame="none"
+cd my-world
+
+```
+
+```sh frame="none"
+
+git fetch origin
+
+```
+
+```sh frame="none"
+
+git checkout -t origin/dev
+
+```
+
+```sh frame="none"
+
+git pull
+
+```
+
+```sh frame="none"
+
+npm run dev
+
+```
+
+---
+
+
+<Aside title="Need a Git refresher?" type="tip">
+
+[Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+</Aside>
+
+
+---
+
+## Start building
+
+### APIs
+
+<LinkCard title="For all things APIs, head over to Getting Started 📖" href="/docs/getting-started" />
+
+---
+
+
+### Hosting
+
+When you're ready to host, choose between:
+
+<LinkCard title="Self-hosting" href="/hosting/self" />
+<LinkCard title="Hosting Provider" href="/hosting/provider" />
+
+
+---
+
+### Need help coding?
+
+<LinkCard title="AI can be your friend, and the community is here to help." href="/guides/coding/ai/" />
+
+
+---
+
+<Aside type="tip" title="Have fun!">
+Hop in the [Discord](https://discord.gg/KbgAua7XXS) if you get stuck or inspired.
+
+Share what you're cooking on [X](https://x.com/hyperfy_io) and tag @hyperfy_io
+</Aside>
+
+---
+
+<LinkCard title=" 🎮  Play in the v2 sandbox to see where current `dev` branch is." href="https://play.hyperfy.xyz/" />
+
+---
+
+### FAQs
+
+- [Developer FAQs](/faq/developer)
+- [Creator FAQs](/faq/creator)
+
+If you run into please feel free to join Hyperfy [Discord](https://discord.gg/KbgAua7XXS) to ask for help.  The community is knowledgeable and very supportive.
+
+---

@@ -1,0 +1,144 @@
+---
+title: Nodes
+description: Docs for Nodes in Hyperfy v2.
+---
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+<FileTree>
+
+- docs
+  - ref
+    - [Action.md](/ref/action/)
+    - [Anchor.md](/ref/anchor)
+    - [App.md](/ref/app)
+    - [Audio.md](/ref/audio)
+    - [Avatar.md](/ref/avatar)
+    - [Collider.md](/ref/collider)
+    - [Group.md](/ref/group)
+    - [LOD.md](/ref/lod)
+    - [Material.md](/ref/material)
+    - [Mesh.md](/ref/mesh)
+    - [Node.md](/ref/node)
+    - [Num.md](/ref/num)
+    - [Player.md](/ref/player)
+    - [Props.md](/ref/props)
+    - [rigidbody.md](/ref/rigidBody)
+    - [UI.md](/ref/ui)
+    - [UIText.md](/ref/ui-text)
+    - [UIView.md](/ref/ui-view)
+    - [UIImage.md](/ref/ui-image)
+    - [World.md](/ref/world)
+
+
+</FileTree>
+
+
+<Aside type="caution">
+From [17 Mar 25](https://github.com/hyperfy-xyz/hyperfy/tree/main/docs)  - things move fast - may change from in-alpha
+</Aside>
+
+
+### [Action](/ref/action)
+
+An action is something people can interact with in the world.
+
+---
+
+### [Anchor](/ref/anchor)
+
+An anchor can be used to attach players to them, eg for seating or vehicles.
+
+---
+
+### [App](/ref/app)
+Global app variable in Hyperfy v2.
+
+---
+
+
+### [Audio](/ref/audio)
+Represents a single audio clip that can be played in the world.
+
+---
+
+### [Avatar](/ref/avatar)
+Renders a VRM avatar
+
+---
+
+### [Collider](/ref/collider)
+A collider connects to its parent rigidbody to simulate under physics.
+
+---
+
+### [Group](/ref/group)
+A regular old node with no other behavior. Useful for grouping things together underone parent.
+
+---
+
+### [LOD](/ref/lod)
+A LOD can hold multiple child nodes and automatically activate/deactivate them based on their distance from the camera.
+
+---
+
+### [Material](/ref/material)
+A material on a Mesh node.
+
+---
+
+### [Mesh](/ref/mesh)
+Represents a mesh to be rendered.
+
+---
+
+### [Node](/ref/node)
+The base class for all other nodes.
+
+---
+
+### [Num](/ref/num)
+Global num method, to generate random numbers replace Math.random()
+
+---
+
+### [Props](/ref/props)
+Apps can expose a list of custom UI fields allowing non-technical people to configure or change the way your apps work.
+
+---
+
+### [Player](/ref/player)
+Represents a player. An instance of Player can be retrived from events or via World.getPlayer
+
+---
+
+### [RigidBody](/ref/rigidBody)
+A rigidbody that has colliders as children will act under physics.
+
+---
+
+### [UI](/ref/ui)
+Displays a UI plane in-world
+
+---
+
+### [UIText](/ref/ui-text)
+Represents text inside a UI.
+
+---
+
+### [UIView](/ref/ui-view)
+Represents a single view inside a UI, similar to a `div`.
+
+---
+
+### [UIImage](/ref/ui-image)
+
+An image in a UI.
+
+---
+
+### [World](/ref/world)
+The global `world` variable is always available within the app scripting runtime.
+
+---

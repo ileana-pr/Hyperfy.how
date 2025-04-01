@@ -3,111 +3,156 @@ title: What is Hyperfy?
 description: Introduction to Hyperfy.
 ---
 import { Badge } from '@astrojs/starlight/components';
-
-Hyperfy is a digital space platform where anyone, without needing to be an expert in technology or 3D design, can create and explore immersive virtual worlds. Access it from your web browser on any device, including [virtual reality!](/resources/webxr/)
-
-[Hyperfy v1](https://hyperfy.io/) <Badge text="v1" variant="note" />
+import { Card, LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 
-[Hyperfy v2](https://github.com/hyperfy-xyz/hyperfy)  <Badge text="v2" variant="tip" />
+Hyperfy is an open source game-engine currently in Early Access expanding on the power of browser-based Threejs and PhysX.
+
+Collaboratively develop and build virtual worlds, 3d games, immersive experiences, and the open-interoperable metaverse accessible on *any* device including mobile and virtual reality.
+
+Develop your experiences on your own self hosted exclusive projects or use the hosting services within the Hyperfy eco system. Hyperfy is building a launchpad, empowering all to join the movement.
+
+---
+---
+---
+
+<Badge text="v2" variant="tip" />
+
+
+<CardGrid>
+<LinkCard title="Hyperfy v2 Github" href="https://github.com/hyperfy-xyz/hyperfy" />
+<LinkCard title="🎮 Play in the v2 Sandbox" href="https://play.hyperfy.xyz" />
+</CardGrid>
+
+
+---
+---
+---
 
 
 [![Overview](/assets/overview.webp)](/assets/overview.webp)
 
----
 
-### 🧬 Features
-
-- Standalone persistent world
-- Host them on your own domain
-- Connect via Hyperfy for portable avatars
-- Realtime content creation in-world
-- Realtime coding in-world (for devs)
-- Fully interactive and interoperable app format
-- Highly extensible
+[![Collectables](/assets/collectables.webp)](/assets/collectables.webp)
 
 
 ---
 
-### What makes it special?
-* **Total accessibility**: It works on any browser (no downloads needed), your phone, and is compatible with [VR headsets](/resources/webXR) for more immersive experiences.
-* **Flexible tools**: Create art galleries, event venues, virtual stores, educational classrooms, interactive games, digital retreats… or whatever you can imagine!
-* **Community-focused**: A perfect space to gather, collaborate, livestream, or just hang out with friends. Worlds can be edited by teams in real time.
-* **Open-source project for everyone**: Whether you’re a beginner or an expert in [coding](/resources/coding) and [3D design](/resources/3d), you can create worlds with [intuitive tools](/resources/3d/#hyperfy-tools) or customize them with your own creations, lighting, and much more. [Open Source - GPL 3.0](https://github.com/hyperfy-xyz/hyperfy?tab=GPL-3.0-1-ov-file)
+<LinkCard title="For Quick Start 🚀" href="/setup/quickstart" />
 
 ---
 
-## Hyperfy for Audiences
-### For Communities
-
-[![community](/assets/community.webp)](/assets/community.webp)
-
-{/* [<img src="/assets/community.webp" width="250"/>](/assets/community.webp) */}
-{/*if 50% is better*/}
-
-* Boundless virtual meetups: Organize meetups, workshops, themed parties, or fan clubs in personalized spaces.
-* Interactive events: Livestream talks, concerts, or gaming sessions.
-* Collaborative spaces: Create a "digital home" for your community where everyone can contribute ideas and decorate.
-
----
-
-### For Artists
-
-
-[![artists](/assets/artists.webp)](/assets/artists.webp)
-
-* 3D virtual galleries: Showcase your paintings, digital sculptures, photography, or digital art in personalized rooms.
-* Immersive experiences: Take your audience on an interactive journey through your work. Upload videos, sculptures, dancers, and create unforgettable experiences.
-* Global collaborations: Work with other artists in real time, no matter where they are. Collaborate in a tropical jungle, a soccer stadium… or even the stage of your dreams!
-
----
-
-### For Content Creators
-
-[![world builders](/assets/worldBuilders.webp)](/assets/worldBuilders.webp)
-
-* Innovative live events: Host an AMA (ask me anything) on a virtual stage, a product launch in a 3D store, or a podcast in a futuristic studio.
-* Monetize your creativity: Sell digital merch, offer exclusive experiences, or create VIP access for your community.
-* Engage your audience: Design trivia nights, scavenger hunts, or role-playing games within your worlds.
-
----
-
-### For Game Developers
+### For Developers/Game Devs
 
 [![gaming](/assets/gaming.webp)](/assets/gaming.webp)
 
 
-* Build interactive worlds: Create games with immersive environments, puzzles, and challenges that players can explore.
-* Test and iterate: Use Hyperfy’s real-time editing tools to prototype and refine your game mechanics.
-* Host gaming events: Organize tournaments, live gameplay sessions, or collaborative game-building workshops.
-* Monetize your games: Sell access to your worlds, offer in-game purchases, or create premium experiences for players.
+<CardGrid stagger>
+  <Card title="Interact">
+    Create games with immersive environments, puzzles, and challenges that players can explore.
+  </Card>
+  <Card title="ThreeJS and PhysX">
+    Browser based game design and physics.
+  </Card>
+  <Card title="Host">
+    Organize tournaments, live gameplay sessions, or collaborative game-building workshops.
+  </Card>
+  <Card title="Earn">
+    Sell access to your worlds, offer in-game purchases, or create premium experiences for players.
+  </Card>
+</CardGrid>
+
+
+<LinkCard title="Get Hyperfy Tools for Blender" href="/guides/3d/blender/#hyperfy-tools" />
+<LinkCard title="Solana Integration" href="/guides/web3/solana/" />
+
 
 ---
 
-### What’s the difference between Hyperfy V1 and V2?
+---
 
-* Hyperfy V2 (OS) is the latest version, designed to redefine digital spaces. Here, you’ll find all the tools from V1, plus apps created by the community! We’re building an ecosystem that strengthens your real-life connections and projects, no matter where you are. Although it’s still in development, you’ll soon be able to explore everything. * [Open v2 Sandbox](https://play.hyperfy.xyz) <Badge text="v2" variant="tip" />
+### For Creators/Designers/Artists
+
+
+[![artists](/assets/artists.webp)](/assets/artists.webp)
+
+
+<CardGrid stagger>
+  <Card title="3D virtual galleries">
+   Showcase your paintings, digital sculptures, photography, digital art...
+  </Card>
+  <Card title="Immersive experiences">
+    Upload videos, sculptures, dancers, and most things you can imagine.
+  </Card>
+  <Card title="Global collaborations">
+    Work with other artists in real time, no matter where they are. Collaborate in a tropical jungle, a soccer stadium, any dream stage you want.
+  </Card>
+</CardGrid>
+
+
+[![world builders](/assets/worldBuilders.webp)](/assets/worldBuilders.webp)
+
+<CardGrid stagger>
+  <Card title="Innovate">
+    Host an AMA (ask me anything) on a virtual stage, a product launch in a 3D store, or a podcast in a futuristic studio.
+  </Card>
+  <Card title="Monetize">
+    Sell digital merch, offer exclusive experiences, or create VIP access for your community.
+  </Card>
+  <Card title="Engage">
+    Design trivia nights, scavenger hunts, or role-playing games within your worlds.
+  </Card>
+</CardGrid>
+
+
+<LinkCard title="Solana Integration" href="/guides/web3/solana/" />
 
 ---
 
-### Some classic v1 worlds...
 
-*  [hyperfy.io/blockbuster](https://hyperfy.io/blockbuster)  <Badge text="v1" variant="note" /> by Roustan (Revisit the 90's nostalgia)
-* [hyperfy.io/expanse](https://hyperfy.io/expanse) by Ash <Badge text="v1" variant="note" />
-* [Artist expo on v1](https://hyperfy.io/mew) <Badge text="v1" variant="note" />
-{/* * Demo Atoll of Ether by Maebbie [hyperfy.io/expanse](https://hyperfy.io/expanse) <Badge text="v1" variant="note" /> */}
+### For Communities/Brands
+
+[![community](/assets/community.webp)](/assets/community.webp)
+
+
+
+<CardGrid stagger>
+  <Card title="Virtual Collaboration">
+    Organize meetups, workshops, themed parties, or fan clubs in personalized spaces.
+  </Card>
+  <Card title="Interactive events">
+    Livestream talks, concerts, or gaming sessions.
+  </Card>
+</CardGrid>
+
+
+{/* <LinkCard title="Hire a Developer or Builder" href="/gethelp" /> */}
+
+
+
+
+
+
+{/* ### What’s the difference between Hyperfy <Badge text="v1" variant="note" />& <Badge text="v2" variant="tip" />?
+
+* Hyperfy <Badge text="v2" variant="tip" /> is the latest version, designed to redefine digital spaces. Here, you’ll find all the tools from <Badge text="v1" variant="note" />, plus apps created by the community! We’re building an ecosystem that strengthens your real-life connections and projects, no matter where you are. Although it’s still in development, you’ll soon be able to explore everything. * */}
+
+---
+---
+---
+
+
+## Ready for <Badge text="v2" variant="tip" />?
+
+<CardGrid>
+<LinkCard title="Quickstart Installation 🚀" href="/setup/quickstart/" />
+<LinkCard title="Builders Docs 📖" href="/docs/getting-started" />
+</CardGrid>
+
+<LinkCard title="🎮 Play in the v2 Sandbox" href="https://play.hyperfy.xyz" />
 
 
 ---
-
-## Ready?
-
-- [Quickstart v2 Installation](/quickstart/installation)  <Badge text="v2" variant="tip" />
-- [Getting started with v2](/docs/getting-started)  <Badge text="v2" variant="tip" />
-- [Video Walkthrough By @beb.eth 🛠 | RTFKT](/community/videos#Hyperfy)   <Badge text="v1" variant="note" />
-{/* - [Additional builder guides on the Hyperfy Community Builder Guide Book](https://hackmd.io/@RealmWeaver/SkLMyAIvye)[Hyperfy Walkthrough (Article) By @MetaMike](https://hackmd.io/@metamike/hyperfy) */}
-
-
 
 
 

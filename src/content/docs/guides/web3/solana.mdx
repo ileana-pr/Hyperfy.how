@@ -1,0 +1,67 @@
+---
+title: Solana
+description: Solana mod for Hyperfy v2.
+---
+
+import { Badge } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+
+<Aside>Solana integration is currently a WIP.  We currently recommend self-hosting and using the `hypkg` tool to install the mod on your local environment.</Aside>
+
+## Quick start
+
+Run `npx hypkg apply drama-haus/solana` on your latest dev branch.
+
+<LinkCard title="You can check what this patch adds here" href="https://github.com/hyperfy-xyz/hyperfy/compare/dev...drama-haus:hyperfy:cow_solana" />
+
+
+## Using in scripts
+
+The mod exposes `app.solana` and `player.solana` to scripts.
+- `player.solana` contains the solana wallet address of that player (if they are connected)
+- `app.solana` contains the binding to interact with wallets
+
+## Example
+
+```javascript
+  async function getBalance(tokenMint, account) {
+    const solana = app.solana()
+    if (!solana?.connection) {
+      log('No Solana connection');
+    }
+
+    token = await solana.programs.token(tokenMint)
+    if (!token) throw new Error("token not found")
+
+    const { success, balance, tokenAccount } = await token.balance(account)
+    console.log({ success, balance, tokenAccount })
+  }
+
+async function transfer(tokenMint, to, amount) {
+  const solana = app.solana()
+  const token = await solana.programs.token(tokenMint) // fetch token metadata
+  const transferResult = await token.transfer(to, amount);
+  const player = world.getPlayer();
+
+  if (transferResult.success) {
+    app.send("client:transfer:success", [amount, to, player.solana]);
+  } else {
+
+    app.send("client:transfer:error", [amount, to, player.solana]);
+  }
+}
+
+```
+
+
+---
+
+
+### Solana Agent Kit
+
+<LinkCard title="AI Agents on Solana" href="/resources/agents/#solana-agent-kit" />
+
+---
+
