@@ -112,6 +112,7 @@ export default defineConfig({
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
+						{ label: 'Hyperfy Fork Guide', slug: 'guides/hyperfy_fork_guide' },
 						{ label: 'Optimizing Assets', slug: 'guides/optimizing' },
 						// { label: 'Docs', slug: 'guides/docs' },
 					],
